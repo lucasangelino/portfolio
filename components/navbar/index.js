@@ -29,7 +29,12 @@ import Link from "../links";
 import SwitchDarkMode from "../buttons/darkModeBtn";
 import MobileNav from "../navbar/mobileNav";
 
-const links = ["Home", "Acerca de mi", "Portfolio", "Freelance"];
+const links = [
+  { id: 1, text: "Home", special: true },
+  { id: 2, text: "Acerca de mi", special: false },
+  { id: 3, text: "Portfolio", special: false },
+  { id: 4, text: "Freelance", special: true },
+];
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -47,17 +52,17 @@ export default function Navbar() {
             />
             <HStack spacing={8} alignItems={"center"}>
               <Box>Logo</Box>
-              <HStack
-                as={"nav"}
-                spacing={4}
-                display={{ base: "none", md: "flex" }}
-              >
-                {links.map((link) => (
-                  <Link key={link} href={link}>
-                    {link}
-                  </Link>
-                ))}
-              </HStack>
+            </HStack>
+            <HStack
+              as={"nav"}
+              spacing={4}
+              display={{ base: "none", md: "flex" }}
+            >
+              {links.map((link) => (
+                <Link key={link.id} href={"#"}>
+                  {link.text}
+                </Link>
+              ))}
             </HStack>
             <SwitchDarkMode />
           </Flex>

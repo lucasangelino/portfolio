@@ -13,7 +13,7 @@ export default function Link({ children, href }) {
       }}
       href={href}
     >
-      <Text fontSize="lg">{children}</Text>
+      <Text fontSize="xl">{children}</Text>
     </ChakraLink>
   );
 }
