@@ -8,7 +8,8 @@ export default function Link({ children, href }) {
       rounded={"md"}
       _hover={{
         textDecoration: "none",
-        color: useColorModeValue("brand.800", "brand.600"),
+        color: useColorModeValue("gray.200", "gray.100"),
+        backgroundColor: useColorModeValue("brand.500", "brand.800"),
       }}
       href={href}
     >
