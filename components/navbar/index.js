@@ -2,7 +2,6 @@ import {
   Box,
   Flex,
   Avatar,
-  Link,
   Button,
   Menu,
   MenuButton,
@@ -15,23 +14,12 @@ import {
   useColorMode,
   Center,
   Container,
+  HStack,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
-const NavLink = ({ children }) => (
-  <Link
-    px={2}
-    py={1}
-    rounded={"md"}
-    _hover={{
-      textDecoration: "none",
-      bg: useColorModeValue("gray.200", "gray.700"),
-    }}
-    href={"#"}
-  >
-    {children}
-  </Link>
-);
+// Components
+import Link from "../links";
 
 export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -44,11 +32,15 @@ export default function Navbar() {
             <Box>Logo</Box>
 
             <Flex alignItems={"center"}>
-              <Stack direction={"row"} spacing={7}>
+              <HStack direction={"row"} spacing={7}>
+                <Link href={"#"}>Home</Link>
+                <Link href={"#"}>Acerca de mi</Link>
+                <Link href={"#"}>Porfolio</Link>
+                <Link href={"#"}>Freelance</Link>
                 <Button onClick={toggleColorMode}>
                   {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
                 </Button>
-              </Stack>
+              </HStack>
             </Flex>
           </Flex>
         </Box>
