@@ -7,42 +7,62 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
+  IconButton,
   MenuDivider,
   useDisclosure,
   useColorModeValue,
   Stack,
-  useColorMode,
   Center,
   Container,
   HStack,
 } from "@chakra-ui/react";
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import {
+  MoonIcon,
+  SunIcon,
+  HamburgerIcon,
+  CloseIcon,
+  AddIcon,
+} from "@chakra-ui/icons";
 
 // Components
 import Link from "../links";
+import SwitchDarkMode from "../buttons/darkModeBtn";
+import MobileNav from "../navbar/mobileNav";
+
+const links = ["Home", "Acerca de mi", "Portfolio", "Freelance"];
 
 export default function Navbar() {
-  const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
       <Container maxW="container.xl">
-        <Box px={4}>
+        <Box>
           <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-            <Box>Logo</Box>
-
-            <Flex alignItems={"center"}>
-              <HStack direction={"row"} spacing={7}>
-                <Link href={"#"}>Home</Link>
-                <Link href={"#"}>Acerca de mi</Link>
-                <Link href={"#"}>Porfolio</Link>
-                <Link href={"#"}>Freelance</Link>
-                <Button onClick={toggleColorMode}>
-                  {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-                </Button>
+            <IconButton
+              size={"md"}
+              icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+              aria-label={"Open Menu"}
+              display={{ md: "none" }}
+              onClick={isOpen ? onClose : onOpen}
+            />
+            <HStack spacing={8} alignItems={"center"}>
+              <Box>Logo</Box>
+              <HStack
+                as={"nav"}
+                spacing={4}
+                display={{ base: "none", md: "flex" }}
+              >
+                {links.map((link) => (
+                  <Link key={link} href={link}>
+                    {link}
+                  </Link>
+                ))}
               </HStack>
-            </Flex>
+            </HStack>
+            <SwitchDarkMode />
           </Flex>
+
+          {isOpen ? <MobileNav links={links} /> : null}
         </Box>
       </Container>
     </>

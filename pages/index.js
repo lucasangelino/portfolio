@@ -11,12 +11,16 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <Container maxW="container.xl" p={0}>
+      <Container maxW="container.xl" py={5}>
         <Flex
           h={{ base: "auto", md: "100vh" }}
-          py={[0, 10, 20]}
-          direction={{ base: "column-reverse", md: "row" }}
-        ></Flex>
+          py={[10, 10, 20]}
+          direction={"column"}
+        >
+          <div>afdafs</div>
+          <div>afdsdfsdfdfafs</div>
+          <div>afdafs</div>
+        </Flex>
       </Container>
     </>
   );
