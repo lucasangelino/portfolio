@@ -9,10 +9,12 @@ import {
 } from "@chakra-ui/layout";
 import { Button } from "@chakra-ui/button";
 import { Image } from "@chakra-ui/image";
-import { useColorMode } from "@chakra-ui/color-mode";
+import { useColorMode, useColorModeValue } from "@chakra-ui/color-mode";
 
 function Cart() {
   const { toggleColorMode } = useColorMode();
+  const bgColor = useColorModeValue("gray.50", "whiteAlpha.50");
+  const secondaryTextColor = useColorModeValue("gray.600", "whiteAlpha.50");
   return (
     <VStack
       w="full"
@@ -20,10 +22,10 @@ function Cart() {
       p={5}
       spacing={10}
       alignItems="flex-start"
-      bg="gray.50"
+      bg={bgColor}
     >
       <VStack spacing={3} alignItems="flex-start">
-        <Heading size="2xl">Your Details</Heading>
+        <Heading size="2xl">Cart</Heading>
         <Text>
           If the price is too hard on your eyes
           <Button onClick={toggleColorMode} variant="link" colorScheme="black">
@@ -33,7 +35,11 @@ function Cart() {
       </VStack>
       <HStack spacing={6} alignItems="center" w="full">
         <AspectRatio ratio={1} w={24}>
-          <Image title="article" alt="article" />
+          <Image
+            src={"../../public/pokeball.png"}
+            title="article"
+            alt="article"
+          />
         </AspectRatio>
         <Stack
           spacing={0}
@@ -54,7 +60,11 @@ function Cart() {
 
       <HStack spacing={6} alignItems="center" w="full">
         <AspectRatio ratio={1} w={24}>
-          <Image title="article" alt="article" />
+          <Image
+            src={"../../public/pokeball.png"}
+            title="article2"
+            alt="article2"
+          />
         </AspectRatio>
         <Stack
           spacing={0}

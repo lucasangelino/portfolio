@@ -9,9 +9,12 @@ import {
   SimpleGrid as Grid,
   GridItem,
 } from "@chakra-ui/layout";
+import { useBreakpointValue } from "@chakra-ui/media-query";
 import { Select } from "@chakra-ui/select";
 
 function Details() {
+  const colSpan = useBreakpointValue({ base: 2, md: 1 });
+
   return (
     <VStack w="full" h="full" p={5} spacing={10} alignItems="flex-start">
       <VStack spacing={3} alignItems="flex-start">
@@ -19,33 +22,33 @@ function Details() {
         <Text>If you already have an account, click here to log in.</Text>
       </VStack>
       <Grid columns={2} columnGap={3} rowGap={6} w="full">
-        <GridItem colSpan={1}>
+        <GridItem colSpan={colSpan}>
           <FormControl>
-            <FormLabel>Firt Name</FormLabel>
+            <FormLabel key={1}>Firt Name</FormLabel>
             <Input placeholder="Luke" />
           </FormControl>
         </GridItem>
-        <GridItem colSpan={1}>
+        <GridItem colSpan={colSpan}>
           <FormControl>
-            <FormLabel>Last Name</FormLabel>
+            <FormLabel key={2}>Last Name</FormLabel>
             <Input placeholder="Skywalker" />
           </FormControl>
         </GridItem>
         <GridItem colSpan={2}>
           <FormControl>
-            <FormLabel>Adress</FormLabel>
+            <FormLabel key={3}>Adress</FormLabel>
             <Input placeholder="Naboo" />
           </FormControl>
         </GridItem>
-        <GridItem colSpan={1}>
+        <GridItem colSpan={colSpan}>
           <FormControl>
-            <FormLabel>City</FormLabel>
+            <FormLabel key={4}>City</FormLabel>
             <Input placeholder="Naboo" />
           </FormControl>
         </GridItem>
-        <GridItem colSpan={1}>
+        <GridItem colSpan={colSpan}>
           <FormControl>
-            <FormLabel>Country</FormLabel>
+            <FormLabel key={5}>Country</FormLabel>
             <Select>
               <option value="argentina">Argentina</option>
               <option value="usa">United State of America</option>
@@ -56,7 +59,7 @@ function Details() {
         </GridItem>
         <Checkbox defaultChecked={true}>Ship to billing address</Checkbox>
         <GridItem colSpan={2}>
-          <Button size="lg" w="full">
+          <Button variant="primary" size="lg" w="full">
             Place Order
           </Button>
         </GridItem>
