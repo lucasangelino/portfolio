@@ -3,6 +3,7 @@ import { Container, Flex, VStack } from "@chakra-ui/layout";
 
 // components
 import Navbar from "../components/navbar";
+import AboutMe from "../components/about";
 
 // styles
 import styles from "../styles/Home.module.css";
@@ -17,9 +18,7 @@ export default function Home() {
           py={[10, 10, 20]}
           direction={"column"}
         >
-          <div>afdafs</div>
-          <div>afdsdfsdfdfafs</div>
-          <div>afdafs</div>
+          <AboutMe />
         </Flex>
       </Container>
     </>
