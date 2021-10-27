@@ -6,9 +6,10 @@ export default function Link({ children, href }) {
       px={2}
       py={1}
       rounded={"md"}
+      color={"gray.500"}
       _hover={{
         textDecoration: "none",
-        color: useColorModeValue("gray.200", "gray.100"),
+        color: useColorModeValue("gray.100", "white"),
         backgroundColor: useColorModeValue("brand.500", "brand.800"),
       }}
       href={href}
