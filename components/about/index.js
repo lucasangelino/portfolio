@@ -7,6 +7,7 @@ import {
   VStack,
   Text,
 } from "@chakra-ui/layout";
+import { Image, AspectRatio } from "@chakra-ui/react";
 import { useBreakpointValue } from "@chakra-ui/media-query";
 
 export default function AboutMe() {
@@ -31,11 +32,19 @@ export default function AboutMe() {
             Me gusta ayudar a las personas a mejorar el mundo mediante software
             de calidad.
           </Text>
-          <Text fontSize="xl" color={"gray.400"} mt={10}>
+          <Text fontSize="xl" color={"gray.400"} my={10}>
             Tambien soy un estusiasta de los deportes y del montañismo!
           </Text>
         </GridItem>
-        <GridItem colSpan={colSpan}>Foto</GridItem>
+        <GridItem colSpan={colSpan}>
+          {/* <AspectRatio maxW="500px" ratio={3 / 4}> */}
+          <Image
+            src="https://kentcdodds.com/img/image/upload/w_900,q_auto,f_auto/kentcdodds.com/illustrations/kody-flying_red"
+            alt="naruto"
+            objectFit="cover"
+          />
+          {/* </AspectRatio> */}
+        </GridItem>
       </Grid>
     </HStack>
   );
