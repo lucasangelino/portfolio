@@ -4,6 +4,7 @@ import { Container, Flex, VStack } from "@chakra-ui/layout";
 // components
 import Navbar from "../components/navbar";
 import AboutMe from "../components/about";
+import Portfolio from "../portfolio";
 
 // styles
 import styles from "../styles/Home.module.css";
@@ -19,6 +20,7 @@ export default function Home() {
           direction={"column"}
         >
           <AboutMe />
+          <Portfolio />
         </Flex>
       </Container>
     </>
