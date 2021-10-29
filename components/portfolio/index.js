@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 
 // styles
-import { brandColor } from "../theme/constants";
+import { brandColor } from "../../theme/constants";
 
 export default function Portfolio() {
   const { BRAND_500, BRAND_800 } = brandColor;

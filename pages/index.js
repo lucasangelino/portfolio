@@ -4,7 +4,8 @@ import { Container, Flex, VStack } from "@chakra-ui/layout";
 // components
 import Navbar from "../components/navbar";
 import AboutMe from "../components/about";
-import Portfolio from "../portfolio";
+import Portfolio from "../components/portfolio";
+import Abilities from "../components/abilities";
 
 // styles
 import styles from "../styles/Home.module.css";
