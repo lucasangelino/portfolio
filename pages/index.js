@@ -22,6 +22,7 @@ export default function Home() {
         >
           <AboutMe />
           <Portfolio />
+          <Abilities />
         </Flex>
       </Container>
     </>

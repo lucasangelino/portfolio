@@ -26,7 +26,7 @@ export default function AboutMe() {
             Angelino
           </Text>
           <Text fontSize="5xl" color={"yellow.500"}>
-            Desarrollador Frontend 🐱‍🏍
+            Desarrollador Frontend 👾
           </Text>
           <Text fontSize="3xl" color={"gray.400"}>
             Me gusta ayudar a las personas a mejorar el mundo mediante software
