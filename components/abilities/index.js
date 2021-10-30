@@ -1,7 +1,6 @@
 import { Box, Container, Flex, Text } from "@chakra-ui/layout";
 // styles
 import { brandColor } from "../../theme/constants";
-
 export default function Abilities() {
   const { BRAND_500, BRAND_800 } = brandColor;
 
