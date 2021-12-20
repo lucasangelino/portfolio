@@ -16,6 +16,11 @@ const projects = [
     publicaciones con amigos. Creada con React, Node, Firebase y basada
     en Mobile Only.`,
     githubUrl: 'https://github.com/'
+  },
+  {
+    name: "Url Shortener",
+    desc: `Con este proyecto podrás acortar cualquier url de manera rapida y sencilla`,
+    githubUrl: 'https://github.com/'
   }
 ]
 
