@@ -41,14 +41,14 @@ export default function Portfolio() {
         Proyectos destacados ✨
       </Text>
       {
-        destacados.map( highPRoject => <HighProjectCard project={highPRoject} /> )
+        destacados.map( (highPRoject, index) => <HighProjectCard key={index} project={highPRoject} /> )
       }
 
       <Text fontSize="6xl" color={BRAND_500}>
         Otros proyectos🚀
       </Text>
       {
-        projects.map(project => <ProjectCard project={project} />)
+        projects.map((project, index) => <ProjectCard key={index} project={project} />)
       }
     </Container>
   );
