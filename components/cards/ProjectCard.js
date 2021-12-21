@@ -18,7 +18,7 @@ import {
 import { brandColor } from "../../theme/constants";
 
 export function ProjectCard ({project}) {
-    const { BRAND_500, BRAND_800 } = brandColor;
+    const { BRAND_500 } = brandColor;
     const {name, desc, githubUrl} = project
     return (
         <>
