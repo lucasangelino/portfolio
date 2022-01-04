@@ -1,16 +1,9 @@
 import * as React from 'react'
 import {
-    Stack,
     Flex,
     Box,
-    Heading,
     Text,
-    Button,
-    Image,
-    IconButton,
-    Icon,
     useColorModeValue,
-    Divider,
     Link
   } from "@chakra-ui/react";
 
@@ -23,15 +16,7 @@ export function HighProjectCard({project}) {
     const {name, description, githubUrl} = project;
 
     return(
-        <Stack
-            align={"center"}
-            bg={useColorModeValue("#800080", "#800080")}
-            rounded={{ lg: "lg" }}
-            spacing={{ base: 8, md: 10 }}
-            py={{ base: 10, md: 15 }}
-            my={{base: 10, md: 15}}
-            direction={{ base: "column", md: "row" }}
-        >
+
           <Flex
             p={50}
             w="full"
@@ -87,6 +72,5 @@ export function HighProjectCard({project}) {
         </Box>
       </Box>
     </Flex>
-      </Stack>
     )
 }

@@ -4,7 +4,7 @@ import {
 } from "@chakra-ui/react";
 
 import { ProjectCard } from '../cards/ProjectCard'
-import { HighProjectCard } from '../cards/HProjectCard'
+import { HighlightedProjects } from '../projectList/HighlightedProjects'
 
 // styles
 import { brandColor } from "../../theme/constants";
@@ -37,14 +37,12 @@ export default function Portfolio() {
   const { BRAND_500 } = brandColor;
   return (
     <Container maxW={"7xl"} mt={60}>
-      <Text fontSize="6xl" color={BRAND_500}>
+      <Text fontSize="4xl" color={BRAND_500}>
         Proyectos destacados ✨
       </Text>
-      {
-        destacados.map( (highPRoject, index) => <HighProjectCard key={index} project={highPRoject} /> )
-      }
+      <HighlightedProjects projects={destacados} />
 
-      <Text fontSize="6xl" color={BRAND_500}>
+      <Text fontSize="4xl" color={BRAND_500}>
         Otros proyectos🚀
       </Text>
       {
