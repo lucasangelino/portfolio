@@ -8,9 +8,6 @@ import Portfolio from "../components/portfolio";
 import Abilities from "../components/abilities";
 import Freelance from '../components/freelance';
 
-// styles
-import styles from "../styles/Home.module.css";
-
 export default function Home() {
   return (
     <>
