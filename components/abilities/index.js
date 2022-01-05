@@ -1,4 +1,3 @@
-import { Image } from '@chakra-ui/react'
 import { Wrap, Container, WrapItem, Text, Center } from "@chakra-ui/layout";
 import Angular from '../icons/Angular'
 import JavaScript from '../icons/JavaScript'

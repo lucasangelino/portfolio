@@ -1,27 +1,14 @@
 import {
   Box,
   Flex,
-  Avatar,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
   IconButton,
-  MenuDivider,
   useDisclosure,
-  useColorModeValue,
-  Stack,
-  Center,
   Container,
   HStack,
 } from "@chakra-ui/react";
 import {
-  MoonIcon,
-  SunIcon,
   HamburgerIcon,
   CloseIcon,
-  AddIcon,
 } from "@chakra-ui/icons";
 
 // Components
@@ -30,10 +17,10 @@ import SwitchDarkMode from "../buttons/darkModeBtn";
 import MobileNav from "../navbar/mobileNav";
 
 const links = [
-  { id: 1, text: "Home", special: true },
-  { id: 2, text: "Acerca de mi", special: false },
-  { id: 3, text: "Portfolio", special: false },
-  { id: 4, text: "Freelance", special: true },
+  { id: 1, text: "Home", special: true, href: "/#" },
+  { id: 2, text: "Acerca de mi", special: false, href: "#aboutMe" },
+  { id: 3, text: "Portfolio", special: false, href: "#portfolio" },
+  { id: 4, text: "Freelance", special: true, href: "#freelance" },
 ];
 
 export default function Navbar() {
@@ -59,7 +46,7 @@ export default function Navbar() {
               display={{ base: "none", md: "flex" }}
             >
               {links.map((link) => (
-                <Link key={link.id} href={"#"}>
+                <Link key={link.id} href={link.href}>
                   {link.text}
                 </Link>
               ))}
