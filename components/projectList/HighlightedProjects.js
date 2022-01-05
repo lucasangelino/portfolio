@@ -9,10 +9,9 @@ export function HighlightedProjects({projects}) {
         <Stack
             align={"center"}
             bg={useColorModeValue("#800080", "#800080")}
-            rounded={{ lg: "lg" }}
+            rounded={'lg'}
             spacing={{ base: 8, md: 10 }}
-            py={{ base: 10, md: 15 }}
-            my={{base: 10, md: 15}}
+            my={{base: 5, md: 15}}
             direction={{ base: "column", md: "row" }}
         >
             {

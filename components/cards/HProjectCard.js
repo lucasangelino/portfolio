@@ -18,11 +18,11 @@ export function HighProjectCard({project}) {
     return(
 
           <Flex
-            p={50}
+            p={{ base: 0, md: 10 }}
             w="full"
             alignItems="center"
             justifyContent="center"
-            >
+          >
             <Box
                 bg={useColorModeValue("white", "gray.800")}
                 mx={{ lg: 8 }}
