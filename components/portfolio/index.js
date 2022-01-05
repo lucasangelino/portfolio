@@ -37,12 +37,12 @@ export default function Portfolio() {
   const { BRAND_500 } = brandColor;
   return (
     <Container maxW={"7xl"} mt={{base: 0}}>
-      <Text fontSize="4xl" color={BRAND_500}>
+      <Text fontSize={{base: "4xl", md: '6xl'}} color={BRAND_500}>
         Proyectos destacados ✨
       </Text>
       <HighlightedProjects projects={destacados} />
 
-      <Text fontSize="4xl" color={BRAND_500} mt={{base: 10, md: 20}}>
+      <Text fontSize={{base: "4xl", md: '6xl'}} color={BRAND_500} mt={{base: 10, md: 20}}>
         Otros proyectos🚀
       </Text>
       {
