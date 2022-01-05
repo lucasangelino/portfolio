@@ -11,7 +11,7 @@ export function HighlightedProjects({projects}) {
             bg={useColorModeValue("#800080", "#800080")}
             rounded={'lg'}
             spacing={{ base: 8, md: 10 }}
-            my={{base: 5, md: 15}}
+            my={{base: 50, md: 15}}
             direction={{ base: "column", md: "row" }}
         >
             {

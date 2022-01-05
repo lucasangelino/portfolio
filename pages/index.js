@@ -17,7 +17,7 @@ export default function Home() {
       <Container maxW="container.xl" py={5}>
         <Flex
           h={{ base: "auto", md: "100vh" }}
-          py={[10, 10, 20]}
+          py={{base: 0, md: 5}}
           direction={"column"}
         >
           <AboutMe />
