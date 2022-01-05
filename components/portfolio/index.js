@@ -11,6 +11,13 @@ import { brandColor } from "../../theme/constants";
 
 const projects = [
   {
+    name: "VotAR",
+    desc: `Con esta aplicacion podras crear preguntas y ver las respuestas de tus usuarios en tiempo real. 
+    Los resultado tambien apareceran graficados en la pantalla. Perfecto para presentaciones en tu trabajo!`,
+    img: "votar.png",
+    githubUrl: 'https://github.com/'
+  },
+  {
     name: "Twittar",
     desc: `Alguna vez usaste Twitter? Bueno, dejá de usarla porque la verdadera
     aplicacion es Twittar. Permite publicar mensajes, fotos y compartir
