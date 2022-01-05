@@ -42,7 +42,7 @@ export default function Portfolio() {
       </Text>
       <HighlightedProjects projects={destacados} />
 
-      <Text fontSize="4xl" color={BRAND_500}>
+      <Text fontSize="4xl" color={BRAND_500} mt={{base: 10, md: 20}}>
         Otros proyectos🚀
       </Text>
       {
