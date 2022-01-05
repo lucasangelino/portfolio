@@ -20,12 +20,12 @@ export default function Abilities() {
   const { BRAND_500 } = brandColor;
 
   return (
-    <Container maxW={"7xl"} my={60}>
+    <Container maxW={"7xl"} my={{base: 10, md: 50}} >
       <Text fontSize="6xl" color={BRAND_500} mb={20} align={'center'}>
         Mis habiliades 🐱‍🏍
       </Text>
       <Center>
-      <Wrap spacing='60px'>
+      <Wrap spacing='60px' justify='center'>
 
         {/* Javascript */}
         <WrapItem>
