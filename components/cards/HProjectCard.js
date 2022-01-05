@@ -29,15 +29,15 @@ export function HighProjectCard({project}) {
                 display={{ lg: "flex" }}
                 maxW={{ lg: "5xl" }}
                 shadow={{ lg: "lg" }}
-                rounded={{ lg: "lg" }}
+                rounded={'lg'}
             >
                 <Box w={{ lg: "50%" }}>
                 <Box
                     h={{ base: 64, lg: "full" }}
-                    rounded={{ lg: "lg" }}
+                    rounded={'lg'}
                     bgSize="cover"
                     style={{
-                    backgroundImage:
+                      backgroundImage:
                         "url('https://images.unsplash.com/photo-1593642532400-2682810df593?ixlib=rb-1.2.1&ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80')",
                     }}
                 ></Box>
