@@ -31,8 +31,18 @@ const projects = [
 
 const destacados = [
   {
-    name: "BBVA Ticketing App",
-    description: `Aplicacion para la gestion de tickets de BBVA.`,
+    name: "BBVA App",
+    description: `Una aplicacion de chat para que puedas compartir cosas con tus amigos. Mensajes, gifs, memes y mucho mas`,
+    githubUrl: "https://github.com/",
+  },
+  {
+    name: "Chat.io",
+    description: `Una aplicacion de chat para que puedas compartir cosas con tus amigos. Mensajes, gifs, memes y mucho mas`,
+    githubUrl: "https://github.com/",
+  },
+  {
+    name: "BBVA App",
+    description: `Una aplicacion de chat para que puedas compartir cosas con tus amigos. Mensajes, gifs, memes y mucho mas`,
     githubUrl: "https://github.com/",
   },
   {

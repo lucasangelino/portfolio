@@ -1,10 +1,6 @@
 import { Box, Stack, useColorModeValue, VStack } from "@chakra-ui/react";
 import { HighProjectCard } from "../cards/HProjectCard";
 
-{
-  /* <HighProjectCard key={index} project={highPRoject} /> */
-}
-
 // TODO Arreglar el gradientcolors. Si hay mas projectos que elementos en la lista
 // rompe ya que hace un overflow del array. No funciona el "||"
 const gradientColors = [
@@ -13,24 +9,16 @@ const gradientColors = [
     endColor: "#FFA000",
   },
   {
-    startColor: "#EF6B00",
-    endColor: "#FFA000",
+    startColor: "#ff4b2b",
+    endColor: "#ff416c",
   },
   {
-    startColor: "#EF6B00",
-    endColor: "#FFA000",
+    startColor: "#2F80ED",
+    endColor: "#56CCF2",
   },
   {
-    startColor: "#EF6B00",
-    endColor: "#FFA000",
-  },
-  {
-    startColor: "#EF6B00",
-    endColor: "#FFA000",
-  },
-  {
-    startColor: "#EF6B00",
-    endColor: "#FFA000",
+    startColor: "#7b920a",
+    endColor: "#add100",
   },
 ];
 
@@ -49,7 +37,7 @@ export function HighlightedProjects({ projects }) {
           height={{ base: "full", md: "auto" }}
           p={{ base: 5, md: 10 }}
         >
-          {console.log(gradientColors[index])}
+          <HighProjectCard key={index} project={highPRoject} />
         </Box>
       ))}
     </VStack>
