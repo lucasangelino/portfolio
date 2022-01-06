@@ -61,6 +61,10 @@ const theme = extendTheme(
       Select: {
         ...inputSelectStyles,
       },
+      // TODO: Remove border on every Component on Focus
+      Button: {
+        ...inputSelectStyles,
+      },
       Checkbox: {
         baseStyle: {
           control: {

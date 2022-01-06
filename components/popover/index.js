@@ -15,8 +15,11 @@ export default function popover({ btnText, title, text }) {
       <PopoverTrigger>
         <Button bg={"tomato"}>{btnText}</Button>
       </PopoverTrigger>
-      <PopoverContent bg={"tomato"}>
-        <PopoverArrow />
+      <PopoverContent
+        bg={"tomato"}
+        borderColor="tomato"
+        _focus={{ border: "none" }}
+      >
         <PopoverCloseButton />
         <PopoverHeader>{title}</PopoverHeader>
         <PopoverBody>{text}</PopoverBody>
