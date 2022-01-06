@@ -1,22 +1,57 @@
-import { Stack, useColorModeValue } from "@chakra-ui/react";
-import { 
-    HighProjectCard,
-} from '../cards/HProjectCard';
+import { Box, Stack, useColorModeValue, VStack } from "@chakra-ui/react";
+import { HighProjectCard } from "../cards/HProjectCard";
 
-export function HighlightedProjects({projects}) {
+{
+  /* <HighProjectCard key={index} project={highPRoject} /> */
+}
 
-    return (
-        <Stack
-            align={"center"}
-            bg={useColorModeValue("#800080", "#800080")}
-            rounded={'lg'}
-            spacing={{ base: 8, md: 10 }}
-            my={{base: 50, md: 15}}
-            direction={{ base: "column", md: "row" }}
+// TODO Arreglar el gradientcolors. Si hay mas projectos que elementos en la lista
+// rompe ya que hace un overflow del array. No funciona el "||"
+const gradientColors = [
+  {
+    startColor: "#EF6B00",
+    endColor: "#FFA000",
+  },
+  {
+    startColor: "#EF6B00",
+    endColor: "#FFA000",
+  },
+  {
+    startColor: "#EF6B00",
+    endColor: "#FFA000",
+  },
+  {
+    startColor: "#EF6B00",
+    endColor: "#FFA000",
+  },
+  {
+    startColor: "#EF6B00",
+    endColor: "#FFA000",
+  },
+  {
+    startColor: "#EF6B00",
+    endColor: "#FFA000",
+  },
+];
+
+export function HighlightedProjects({ projects }) {
+  return (
+    <VStack align={"center"} direction={{ base: "column", md: "row" }}>
+      {projects.map((highPRoject, index) => (
+        <Box
+          key={index}
+          bgGradient={`linear(to right, ${
+            gradientColors[index]["startColor"] || "#EF6B00"
+          }, ${gradientColors[index]["endColor"] || "#FFA000"})`}
+          rounded={"lg"}
+          my={{ base: 50, md: 15 }}
+          width={{ base: "full", md: "100%" }}
+          height={{ base: "full", md: "auto" }}
+          p={{ base: 5, md: 10 }}
         >
-            {
-                projects.map( (highPRoject, index) => <HighProjectCard key={index} project={highPRoject} /> )
-            }
-        </Stack>
-    )
+          {console.log(gradientColors[index])}
+        </Box>
+      ))}
+    </VStack>
+  );
 }
