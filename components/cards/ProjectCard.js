@@ -101,7 +101,6 @@ export function ProjectCard({ project }) {
     </>
   );
 }
-
 const PlayIcon = createIcon({
   displayName: "PlayIcon",
   viewBox: "0 0 58 58",
