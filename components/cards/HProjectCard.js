@@ -1,5 +1,14 @@
 import * as React from "react";
-import { Flex, Box, Text, useColorModeValue, Link } from "@chakra-ui/react";
+import {
+  Flex,
+  Box,
+  Text,
+  useColorModeValue,
+  Link,
+  Stack,
+  Button,
+  Image,
+} from "@chakra-ui/react";
 
 // styles
 import { brandColor } from "../../theme/constants";
@@ -11,27 +20,29 @@ export function HighProjectCard({ project }) {
 
   return (
     <Flex w="full" alignItems="center" justifyContent="center">
-      {/* Image Section */}
       <Box
         bg={useColorModeValue("white", "gray.800")}
         display={{ lg: "flex" }}
         shadow={{ lg: "lg" }}
         rounded={"lg"}
       >
-        <Box w={{ lg: "50%" }}>
-          <Box
-            h={{ base: 64, lg: "full" }}
-            rounded={"lg"}
-            bgSize="cover"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1593642532400-2682810df593?ixlib=rb-1.2.1&ixid=MXwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80')",
-            }}
-          ></Box>
+        {/* Image Section */}
+        <Box
+          Box
+          maxW={{ base: "xl", lg: "5xl" }}
+          w={{ lg: "50%" }}
+          height={{ base: "full", lg: "auto" }}
+        >
+          <Image
+            src="https://1.bp.blogspot.com/-mSaKiXhGEP4/XbBFzwyTqkI/AAAAAAAAA38/ad94ZhjQ9KAYRUCiF1tKmySF8aRc4J_oQCLcBGAsYHQ/s1600/697b023b-64a5-49a0-8059-27b963453fb1.gif"
+            fallbackSrc="https://via.placeholder.com/150"
+            alt="project image"
+            boxSize="100%"
+          />
         </Box>
 
         {/* Description Section */}
-        <Box py={12} px={6} maxW={{ base: "xl", lg: "5xl" }} w={{ lg: "50%" }}>
+        <Box py={20} px={6} maxW={{ base: "xl", lg: "5xl" }} w={{ lg: "50%" }}>
           <Text
             fontSize={{ base: "2xl", md: "3xl" }}
             color={useColorModeValue("gray.800", "white")}
@@ -43,17 +54,26 @@ export function HighProjectCard({ project }) {
             {description}
           </Text>
 
-          <Box mt={8}>
-            <Link
-              bg="gray.900"
-              color="gray.100"
-              fontWeight="semibold"
-              rounded="lg"
-              _hover={{ bg: "gray.800" }}
+          <Stack
+            marginTop={{ base: 4, md: 8 }}
+            spacing={{ base: 4, sm: 6 }}
+            direction={{ base: "column", sm: "row" }}
+          >
+            <Button
+              rounded={"full"}
+              size={"lg"}
+              fontWeight={"normal"}
+              px={6}
+              colorScheme={"red"}
+              bg={BRAND_500}
+              _hover={{ bg: BRAND_800 }}
             >
-              {githubUrl}
-            </Link>
-          </Box>
+              Ver Demo
+            </Button>
+            <Button rounded={"full"} size={"lg"} fontWeight={"normal"} px={6}>
+              Github
+            </Button>
+          </Stack>
         </Box>
       </Box>
     </Flex>
