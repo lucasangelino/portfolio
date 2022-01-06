@@ -6,16 +6,13 @@ import {
   Container,
   HStack,
 } from "@chakra-ui/react";
-import {
-  HamburgerIcon,
-  CloseIcon,
-} from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
 // Components
 import Link from "../links";
 import SwitchDarkMode from "../buttons/darkModeBtn";
 import MobileNav from "../navbar/mobileNav";
-import PopOver from '../popover'
+import PopOver from "../popover";
 
 const links = [
   { id: 1, text: "Home", special: true, href: "/#" },
@@ -40,7 +37,13 @@ export default function Navbar() {
             />
             <HStack spacing={8} alignItems={"center"}>
               <Box>
-                <PopOver btnText={'BETA'} title={'Web en desarrollo'} text={'Es posible que veas errores o cosas sin terminar en esta web. No te preocupes, la sigo desarrollando'} />
+                <PopOver
+                  btnText={"BETA"}
+                  title={"Web en desarrollo"}
+                  text={
+                    "Es posible que veas errores o cosas sin terminar en esta web. No te preocupes, la sigo desarrollando"
+                  }
+                />
               </Box>
             </HStack>
             <HStack

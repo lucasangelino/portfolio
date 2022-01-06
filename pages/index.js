@@ -6,7 +6,7 @@ import Navbar from "../components/navbar";
 import AboutMe from "../components/about";
 import Portfolio from "../components/portfolio";
 import Abilities from "../components/abilities";
-import Freelance from '../components/freelance';
+import Freelance from "../components/freelance";
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       <Container maxW="container.xl" py={5}>
         <Flex
           h={{ base: "auto", md: "100vh" }}
-          py={{base: 0, md: 5}}
+          py={{ base: 0, md: 5 }}
           direction={"column"}
         >
           <AboutMe />
