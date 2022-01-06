@@ -39,9 +39,9 @@ export default function Navbar() {
               <Box>
                 <PopOver
                   btnText={"BETA"}
-                  title={"Web en desarrollo"}
+                  title={"Web en desarrollo 🛠"}
                   text={
-                    "Es posible que veas errores o cosas sin terminar en esta web. No te preocupes, la sigo desarrollando"
+                    "Es posible que veas errores o cosas sin terminar en esta web. No te preocupes, la sigo desarrollando 🙏"
                   }
                 />
               </Box>
