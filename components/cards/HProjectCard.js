@@ -71,7 +71,10 @@ export function HighProjectCard({ project }) {
               Ver Demo
             </Button>
             <Button rounded={"full"} size={"lg"} fontWeight={"normal"} px={6}>
+            <Link href={githubUrl} isExternal>
               Github
+            </Link>
+              
             </Button>
           </Stack>
         </Box>

@@ -33,7 +33,7 @@ const destacados = [
   {
     name: "BBVA App",
     description: `Una aplicacion de chat para que puedas compartir cosas con tus amigos. Mensajes, gifs, memes y mucho mas`,
-    githubUrl: "https://github.com/",
+    githubUrl: "https://github.com/lucasangelino/BBVATicket",
   },
   {
     name: "Chat.io",
