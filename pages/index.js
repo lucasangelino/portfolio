@@ -24,7 +24,7 @@ export default function Home() {
           <Portfolio />
           <Abilities />
           <Freelance />
-          <Project />
+          {/* <Project /> */}
         </Flex>
       </Container>
     </>
