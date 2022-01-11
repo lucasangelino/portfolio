@@ -36,8 +36,8 @@ const destacados = [
     githubUrl: "https://github.com/lucasangelino/BBVATicket",
   },
   {
-    name: "Chat.io",
-    description: `Una aplicacion de chat para que puedas compartir cosas con tus amigos. Mensajes, gifs, memes y mucho mas`,
+    name: "Memes",
+    description: `Una aplicacion para buscar Memes & Gifts. Puedes compartirlos con tus amigos 🤙`,
     githubUrl: "https://github.com/",
   },
   {
