@@ -19,7 +19,7 @@ export function HighProjectCard({ project }) {
   const { name, description, githubUrl } = project;
 
   return (
-    <Flex w="full" alignItems="center" justifyContent="center">
+    <Flex w="full" h="full" alignItems="center" justifyContent="center">
       <Box
         bg={useColorModeValue("white", "gray.800")}
         display={{ lg: "flex" }}
@@ -31,11 +31,11 @@ export function HighProjectCard({ project }) {
           Box
           maxW={{ base: "xl", lg: "5xl" }}
           w={{ lg: "50%" }}
-          height={{ base: "full", lg: "auto" }}
+          // height={{ base: "full", lg: "auto" }}
         >
           <Image
-            src="https://1.bp.blogspot.com/-mSaKiXhGEP4/XbBFzwyTqkI/AAAAAAAAA38/ad94ZhjQ9KAYRUCiF1tKmySF8aRc4J_oQCLcBGAsYHQ/s1600/697b023b-64a5-49a0-8059-27b963453fb1.gif"
-            fallbackSrc="https://via.placeholder.com/150"
+            src="https://media4.giphy.com/media/4gVvASsN9OPyxHhspx/giphy.webp"
+            // fallbackSrc="https://via.placeholder.com/150"
             alt="project image"
             boxSize="100%"
           />
@@ -71,10 +71,9 @@ export function HighProjectCard({ project }) {
               Ver Demo
             </Button>
             <Button rounded={"full"} size={"lg"} fontWeight={"normal"} px={6}>
-            <Link href={githubUrl} isExternal>
-              Github
-            </Link>
-              
+              <Link href={githubUrl} isExternal>
+                Github
+              </Link>
             </Button>
           </Stack>
         </Box>

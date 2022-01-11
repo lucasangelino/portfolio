@@ -1,4 +1,10 @@
-import { Box, Stack, useColorModeValue, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Stack,
+  useColorModeValue,
+  VStack,
+  Container,
+} from "@chakra-ui/react";
 import { HighProjectCard } from "../cards/HProjectCard";
 
 // TODO Arreglar el gradientcolors. Si hay mas projectos que elementos en la lista
@@ -24,7 +30,11 @@ const gradientColors = [
 
 export function HighlightedProjects({ projects }) {
   return (
-    <VStack align={"center"} direction={{ base: "column", md: "row" }}>
+    <VStack
+      align={"center"}
+      direction={{ base: "column" }}
+      my={{ base: 50, md: 15 }}
+    >
       {projects.map((highPRoject, index) => (
         <Box
           key={index}
@@ -32,10 +42,9 @@ export function HighlightedProjects({ projects }) {
             gradientColors[index]["startColor"] || "#EF6B00"
           }, ${gradientColors[index]["endColor"] || "#FFA000"})`}
           rounded={"lg"}
-          my={{ base: 50, md: 15 }}
           width={{ base: "full", md: "100%" }}
-          height={{ base: "full", md: "auto" }}
-          p={{ base: 5, md: 10 }}
+          height={{ base: "full", md: "350px" }}
+          p={5}
         >
           <HighProjectCard key={index} project={highPRoject} />
         </Box>
