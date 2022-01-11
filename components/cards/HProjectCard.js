@@ -21,7 +21,7 @@ export function HighProjectCard({ project }) {
   return (
     <Flex w="full" h="full" alignItems="center" justifyContent="center">
       <Box
-        bg={useColorModeValue("white", "gray.800")}
+        // bg={useColorModeValue("white", "gray.800")}
         display={{ lg: "flex" }}
         shadow={{ lg: "lg" }}
         rounded={"lg"}
@@ -31,18 +31,38 @@ export function HighProjectCard({ project }) {
           Box
           maxW={{ base: "xl", lg: "5xl" }}
           w={{ lg: "50%" }}
-          // height={{ base: "full", lg: "auto" }}
+          height={{ base: "full", lg: "auto" }}
         >
           <Image
-            src="https://media4.giphy.com/media/4gVvASsN9OPyxHhspx/giphy.webp"
-            // fallbackSrc="https://via.placeholder.com/150"
+            src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
             alt="project image"
-            boxSize="100%"
           />
         </Box>
 
         {/* Description Section */}
-        <Box py={20} px={6} maxW={{ base: "xl", lg: "5xl" }} w={{ lg: "50%" }}>
+        {/* backdrop-filter: blur(9px) saturate(127%);
+        -webkit-backdrop-filter: blur(9px) saturate(127%);
+        background-color: rgba(76, 101, 148, 0.59);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125); 
+
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );*/}
+        <Box 
+          py={20}
+          px={6}
+          maxW={{ base: "xl", lg: "5xl" }}
+          w={{ lg: "50%" }}
+          backdropFilter={'blur(5px)'}
+          saturate={127}
+          bg={'#4C6594cc'}
+          borderRadius={'12px'}
+          boxShadow={'0 8px 32px 0 rgba(31, 38, 135, 0.37)'}
+        >
           <Text
             fontSize={{ base: "2xl", md: "3xl" }}
             color={useColorModeValue("gray.800", "white")}

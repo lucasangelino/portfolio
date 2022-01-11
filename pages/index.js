@@ -24,6 +24,7 @@ export default function Home() {
           <Portfolio />
           <Abilities />
           <Freelance />
+          {/* TOOD: remove this */}
           {/* <Project /> */}
         </Flex>
       </Container>
