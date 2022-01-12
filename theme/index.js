@@ -20,6 +20,7 @@ const inputSelectStyles = {
 
 const theme = extendTheme(
   {
+    initialColorMode: "dark",
     colors: {
       brand: {
         50: "#E3F2FD",

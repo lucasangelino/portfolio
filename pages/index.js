@@ -8,8 +8,6 @@ import Portfolio from "../components/portfolio";
 import Abilities from "../components/abilities";
 import Freelance from "../components/freelance";
 
-import Project from '../components/cards/Project'
-
 export default function Home() {
   return (
     <>
@@ -24,8 +22,6 @@ export default function Home() {
           <Portfolio />
           <Abilities />
           <Freelance />
-          {/* TOOD: remove this */}
-          {/* <Project /> */}
         </Flex>
       </Container>
     </>

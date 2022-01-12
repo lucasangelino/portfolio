@@ -2,7 +2,7 @@ import { Container, Text } from "@chakra-ui/react";
 
 import { ProjectCard } from "../cards/ProjectCard";
 import { HighlightedProjects } from "../projectList/HighlightedProjects";
-import ProjectGrid from '../grid/'
+import LatestProject from '../grid/'
 
 // styles
 import { brandColor } from "../../theme/constants";
@@ -22,22 +22,7 @@ const destacados = [
     name: "BBVA App",
     description: `Una aplicacion de chat para que puedas compartir cosas con tus amigos. Mensajes, gifs, memes y mucho mas`,
     githubUrl: "https://github.com/lucasangelino/BBVATicket",
-  },
-  {
-    name: "Memes",
-    description: `Una aplicacion para buscar Memes & Gifts. Puedes compartirlos con tus amigos 🤙`,
-    githubUrl: "https://github.com/",
-  },
-  {
-    name: "BBVA App",
-    description: `Una aplicacion de chat para que puedas compartir cosas con tus amigos. Mensajes, gifs, memes y mucho mas`,
-    githubUrl: "https://github.com/",
-  },
-  {
-    name: "Chat.io",
-    description: `Una aplicacion de chat para que puedas compartir cosas con tus amigos. Mensajes, gifs, memes y mucho mas`,
-    githubUrl: "https://github.com/",
-  },
+  }
 ];
 
 export default function Portfolio() {
@@ -51,9 +36,7 @@ export default function Portfolio() {
       >
         Último projecto ✨
       </Text>
-      {projects.map((project, index) => (
-        <ProjectCard key={index} project={project} />
-      ))}
+      <LatestProject />      
 
       <Text
         fontSize={{ base: "4xl", md: "6xl" }}
@@ -62,7 +45,9 @@ export default function Portfolio() {
       >
         Otros proyectos🚀
       </Text>
-      <ProjectGrid />
+      {projects.map((project, index) => (
+        <ProjectCard key={index} project={project} />
+      ))}
       
     </Container>
   );
