@@ -2,7 +2,7 @@ import { Container, Text } from "@chakra-ui/react";
 
 import { ProjectCard } from "../cards/ProjectCard";
 import { HighlightedProjects } from "../projectList/HighlightedProjects";
-import LatestProject from '../grid/'
+import LatestProject from '../latestproject/LatestProject';
 
 // styles
 import { brandColor } from "../../theme/constants";
