@@ -4,7 +4,9 @@ import {
   Box,
   Text,
   useColorModeValue,
+  useBreakpointValue,
   Link,
+  Heading,
   Stack,
   Button,
   Image,
@@ -13,91 +15,96 @@ import {
 // styles
 import { brandColor } from "../../theme/constants";
 
+const gradientColors = [
+  {
+    startColor: "#EF6B00",
+    endColor: "#FFA000",
+  },
+  {
+    startColor: "#ff4b2b",
+    endColor: "#ff416c",
+  },
+  {
+    startColor: "#2F80ED",
+    endColor: "#56CCF2",
+  },
+  {
+    startColor: "#7b920a",
+    endColor: "#add100",
+  },
+];
+
 export function HighProjectCard({ project }) {
   const { BRAND_500, BRAND_800 } = brandColor;
 
   const { name, description, githubUrl } = project;
 
   return (
-    <Flex w="full" h="full" alignItems="center" justifyContent="center">
-      <Box
-        // bg={useColorModeValue("white", "gray.800")}
-        display={{ lg: "flex" }}
-        shadow={{ lg: "lg" }}
-        rounded={"lg"}
-      >
-        {/* Image Section */}
-        <Box
-          Box
-          maxW={{ base: "xl", lg: "5xl" }}
-          w={{ lg: "50%" }}
-          height={{ base: "full", lg: "auto" }}
-        >
-          <Image
-            src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-            alt="project image"
-          />
-        </Box>
-
-        {/* Description Section */}
-        {/* backdrop-filter: blur(9px) saturate(127%);
-        -webkit-backdrop-filter: blur(9px) saturate(127%);
-        background-color: rgba(76, 101, 148, 0.59);
-        border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.125); 
-
-        background: rgba( 255, 255, 255, 0.25 );
-        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-        backdrop-filter: blur( 4px );
-        -webkit-backdrop-filter: blur( 4px );
-        border-radius: 10px;
-        border: 1px solid rgba( 255, 255, 255, 0.18 );*/}
-        <Box 
-          py={20}
-          px={6}
-          maxW={{ base: "xl", lg: "5xl" }}
-          w={{ lg: "50%" }}
-          backdropFilter={'blur(5px)'}
-          saturate={127}
-          bg={'#4C6594cc'}
-          borderRadius={'12px'}
-          boxShadow={'0 8px 32px 0 rgba(31, 38, 135, 0.37)'}
-        >
-          <Text
-            fontSize={{ base: "2xl", md: "3xl" }}
-            color={useColorModeValue("gray.800", "white")}
-            fontWeight="bold"
-          >
-            {name}{" "}
+<Stack h={'250px'} direction={{ base: 'column', md: 'row' }} my={'20px'}>
+      <Flex p={8} flex={1} align={'center'} justify={'center'}>
+        {/* Text part */}
+        <Stack 
+          spacing={6} 
+          w={'full'} 
+          maxW={'lg'} 
+          bgGradient={`linear(to right, ${
+          gradientColors[0]["startColor"] || "#EF6B00"
+          }, ${gradientColors[0]["endColor"] || "#FFA000"})`}
+          p={2}
+          borderRightRadius={'3xl'}>
+          <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+            <Text
+              as={'span'}
+              position={'relative'}
+              _after={{
+                content: "''",
+                width: 'full',
+                height: useBreakpointValue({ base: '20%', md: '30%' }),
+                position: 'absolute',
+                bottom: 1,
+                left: 0,
+                bg: 'blue.400',
+                zIndex: -1,
+              }}>
+              Freelance
+            </Text>
+            <br />{' '}
+            <Text color={'blue.400'} as={'span'}>
+              Design Projects
+            </Text>{' '}
+          </Heading>
+          <Text fontSize={{ base: 'md', lg: 'lg' }} color={'gray.500'}>
+            The project board is an exclusive resource for contract work. It's
+            perfect for freelancers, agencies, and moonlighters.
           </Text>
-          <Text mt={4} color={useColorModeValue("gray.600", "gray.400")}>
-            {description}
-          </Text>
-
-          <Stack
-            marginTop={{ base: 4, md: 8 }}
-            spacing={{ base: 4, sm: 6 }}
-            direction={{ base: "column", sm: "row" }}
-          >
+          <Stack direction={{ base: 'column', md: 'row' }} spacing={4}>
             <Button
-              rounded={"full"}
-              size={"lg"}
-              fontWeight={"normal"}
-              px={6}
-              colorScheme={"red"}
-              bg={BRAND_500}
-              _hover={{ bg: BRAND_800 }}
-            >
-              Ver Demo
+              rounded={'full'}
+              bg={'blue.400'}
+              color={'white'}
+              _hover={{
+                bg: 'blue.500',
+              }}>
+              Create Project
             </Button>
-            <Button rounded={"full"} size={"lg"} fontWeight={"normal"} px={6}>
-              <Link href={githubUrl} isExternal>
-                Github
-              </Link>
-            </Button>
+            <Button rounded={'full'}>How It Works</Button>
           </Stack>
-        </Box>
-      </Box>
-    </Flex>
+        </Stack>
+      </Flex>
+
+      {/* Img part */}
+      <Flex 
+        flex={1} 
+        justify={'center'}
+      >
+        <Image
+          alt={'Login Image'}
+          objectFit={'cover'}
+          src={
+            'https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+          }
+        />
+      </Flex>
+    </Stack>
   );
 }

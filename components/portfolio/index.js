@@ -2,6 +2,7 @@ import { Container, Text } from "@chakra-ui/react";
 
 import { ProjectCard } from "../cards/ProjectCard";
 import { HighlightedProjects } from "../projectList/HighlightedProjects";
+import ProjectGrid from '../grid/'
 
 // styles
 import { brandColor } from "../../theme/constants";
@@ -13,20 +14,7 @@ const projects = [
     Los resultado tambien apareceran graficados en la pantalla. Perfecto para presentaciones en tu trabajo!`,
     img: "votar.png",
     githubUrl: "https://github.com/",
-  },
-  {
-    name: "Twittar",
-    desc: `Alguna vez usaste Twitter? Bueno, dejá de usarla porque la verdadera
-    aplicacion es Twittar. Permite publicar mensajes, fotos y compartir
-    publicaciones con amigos. Creada con React, Node, Firebase y basada
-    en Mobile Only.`,
-    githubUrl: "https://github.com/",
-  },
-  {
-    name: "Url Shortener",
-    desc: `Con este proyecto podrás acortar cualquier url de manera rapida y sencilla`,
-    githubUrl: "https://github.com/",
-  },
+  }
 ];
 
 const destacados = [
@@ -61,9 +49,11 @@ export default function Portfolio() {
         fontSize={{ base: "4xl", md: "6xl" }}
         color={BRAND_500}
       >
-        Proyectos destacados ✨
+        Último projecto ✨
       </Text>
-      <HighlightedProjects projects={destacados} />
+      {projects.map((project, index) => (
+        <ProjectCard key={index} project={project} />
+      ))}
 
       <Text
         fontSize={{ base: "4xl", md: "6xl" }}
@@ -72,9 +62,8 @@ export default function Portfolio() {
       >
         Otros proyectos🚀
       </Text>
-      {projects.map((project, index) => (
-        <ProjectCard key={index} project={project} />
-      ))}
+      <ProjectGrid />
+      
     </Container>
   );
 }

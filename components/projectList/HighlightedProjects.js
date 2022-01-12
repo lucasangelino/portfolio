@@ -35,24 +35,25 @@ export function HighlightedProjects({ projects }) {
   return (
     <VStack
       align={"center"}
+      justify={"center"}
       direction={{ base: "column" }}
       my={{ base: 50, md: 15 }}
     >
       {projects.map((highPRoject, index) => (
-        <Box
-          key={index}
-          bgImage={'https://cdn1.epicgames.com/salesEvent/salesEvent/egs-discord-discord-s1-2560x1440-51474ee7abe3_2560x1440-e14a2b58e93768f0abc47dbf62a4ee86'}
-          bgPosition={'center'}
-          bgSize={'cover'}
-          // bgGradient={`linear(to right, ${
-          //   gradientColors[index]["startColor"] || "#EF6B00"
-          // }, ${gradientColors[index]["endColor"] || "#FFA000"})`}
-          rounded={"lg"}
-          width={{ base: "full", md: "100%" }}
-          p={{base: 5, md: 10}}
-        >
+        // <Box
+        //   key={index}
+        //   // bgImage={'https://cdn1.epicgames.com/salesEvent/salesEvent/egs-discord-discord-s1-2560x1440-51474ee7abe3_2560x1440-e14a2b58e93768f0abc47dbf62a4ee86'}
+        //   // bgPosition={'center'}
+        //   // bgSize={'cover'}
+        //   // bgGradient={`linear(to right, ${
+        //   //   gradientColors[index]["startColor"] || "#EF6B00"
+        //   // }, ${gradientColors[index]["endColor"] || "#FFA000"})`}
+        //   rounded={"lg"}
+        //   width={{ base: "full", md: "100%" }}
+        //   p={{base: 5, md: 10}}
+        // >
           <HighProjectCard key={index} project={highPRoject} />
-        </Box>
+        // </Box>
       ))}
     </VStack>
   );

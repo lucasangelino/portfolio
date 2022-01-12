@@ -7,6 +7,7 @@ import {
   Text,
   Button,
   Image,
+  // TODO: remove
   IconButton,
   Icon,
   useColorModeValue,
@@ -103,6 +104,7 @@ export function ProjectCard({ project }) {
   );
 }
 
+// TODO: Make Blob with https://www.blobmaker.app/
 const Blob = (props) => {
   return (
     <Icon
