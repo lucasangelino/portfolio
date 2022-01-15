@@ -32,6 +32,7 @@ export default function Portfolio() {
         id="portfolio"
         fontSize={{ base: "4xl", md: "6xl" }}
         color={BRAND_500}
+        my={{ base: 10, md: 20 }}
       >
         Último projecto ✨
       </Text>
@@ -40,7 +41,7 @@ export default function Portfolio() {
       <Text
         fontSize={{ base: "4xl", md: "6xl" }}
         color={BRAND_500}
-        mt={{ base: 10, md: 20 }}
+        my={{ base: 10, md: 20 }}
       >
         Otros proyectos🚀
       </Text>
