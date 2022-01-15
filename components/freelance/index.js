@@ -15,8 +15,9 @@ import Linkedin from '../icons/Linkedin';
 
 export default function Freelance() {
   return (
-    // TODO: fix tabulation on this component
     <Flex
+      id={'freelance'}
+      flexDirection="column"
         textAlign={'center'}
         pt={10}
         justifyContent={'center'}

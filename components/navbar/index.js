@@ -15,7 +15,6 @@ import MobileNav from "../navbar/mobileNav";
 import PopOver from "../popover";
 
 const links = [
-  { id: 1, text: "Home", special: true, href: "/#" },
   { id: 2, text: "Acerca de mi", special: false, href: "#aboutMe" },
   { id: 3, text: "Portfolio", special: false, href: "#portfolio" },
   { id: 4, text: "Freelance", special: true, href: "#freelance" },
