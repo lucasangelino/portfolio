@@ -6,6 +6,11 @@ import {
 } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
 
+const config = {
+  initialColorMode: "light",
+  useSystemColorMode: false,
+};
+
 const inputSelectStyles = {
   variants: {
     filled: {
@@ -20,7 +25,7 @@ const inputSelectStyles = {
 
 const theme = extendTheme(
   {
-    initialColorMode: "dark",
+    ...config,
     colors: {
       brand: {
         50: "#E3F2FD",
