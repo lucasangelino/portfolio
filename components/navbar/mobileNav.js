@@ -8,7 +8,7 @@ export default function MobileNav({ links }) {
     <Box pb={4} display={{ md: "none" }}>
       <Stack as={"nav"} spacing={4}>
         {links.map((link) => (
-          <Link key={link.id}>{link.text}</Link>
+          <Link key={link.id} href={link.href}>{link.text}</Link>
         ))}
       </Stack>
     </Box>
