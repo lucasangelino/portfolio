@@ -35,7 +35,7 @@ export default function Navbar() {
               onClick={isOpen ? onClose : onOpen}
             />
             <HStack spacing={8} alignItems={"center"}>
-              <Box>
+              <Box id="changelog-badge">
                 <PopOver
                   btnText={"BETA"}
                   title={"Web en desarrollo 🛠"}
