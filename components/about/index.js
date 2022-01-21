@@ -13,10 +13,17 @@ import { useBreakpointValue } from "@chakra-ui/media-query";
 export default function AboutMe() {
   const colSpan = useBreakpointValue({ base: 2, md: 1 });
   return (
-    <HStack w="full" h="full" mb={{base: 10, md: 20}} p={{base: 0, md: 10}} spacing={10} alignItems="flex-start">
+    <HStack
+      w="full"
+      h="full"
+      mb={{ base: 10, md: 20 }}
+      p={{ base: 0, md: 10 }}
+      spacing={10}
+      alignItems="flex-start"
+    >
       <Grid columns={2} columnGap={3} w="full">
         <GridItem colSpan={colSpan}>
-          <Text id='aboutMe' fontSize="3xl" color={"gray.400"}>
+          <Text id="aboutMe" fontSize="3xl" color={"gray.400"}>
             Hola 👋, mi nombre es
           </Text>
           <Text fontSize="6xl" color={"brand.500"}>

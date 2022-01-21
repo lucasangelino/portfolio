@@ -5,6 +5,7 @@ import {
   useDisclosure,
   Container,
   HStack,
+  Image,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
@@ -13,6 +14,7 @@ import Link from "../links";
 import SwitchDarkMode from "../buttons/darkModeBtn";
 import MobileNav from "../navbar/mobileNav";
 import PopOver from "../popover";
+import ChangeLogBadge from "../changelog/";
 
 const links = [
   { id: 2, text: "Acerca de mi", special: false, href: "#aboutMe" },
@@ -24,6 +26,7 @@ export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
+      <ChangeLogBadge />
       <Container maxW="container.xl">
         <Box>
           <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
@@ -35,14 +38,8 @@ export default function Navbar() {
               onClick={isOpen ? onClose : onOpen}
             />
             <HStack spacing={8} alignItems={"center"}>
-              <Box id="changelog-badge">
-                <PopOver
-                  btnText={"BETA"}
-                  title={"Web en desarrollo 🛠"}
-                  text={
-                    "Es posible que veas errores o cosas sin terminar en esta web. No te preocupes, la sigo desarrollando 🙏"
-                  }
-                />
+              <Box>
+                <div className="changelog-badge">New</div>
               </Box>
             </HStack>
             <HStack
@@ -56,6 +53,7 @@ export default function Navbar() {
                 </Link>
               ))}
             </HStack>
+
             <SwitchDarkMode />
           </Flex>
 
