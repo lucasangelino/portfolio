@@ -5,7 +5,7 @@ import {
   useDisclosure,
   Container,
   HStack,
-  Image,
+  Img,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
@@ -15,6 +15,9 @@ import SwitchDarkMode from "../buttons/darkModeBtn";
 import MobileNav from "../navbar/mobileNav";
 import PopOver from "../popover";
 import ChangeLogBadge from "../changelog/";
+
+// assets
+import { Logo } from "../../public/logo.jpg";
 
 const links = [
   { id: 2, text: "Acerca de mi", special: false, href: "#aboutMe" },
@@ -39,7 +42,14 @@ export default function Navbar() {
             />
             <HStack spacing={8} alignItems={"center"}>
               <Box>
-                <div className="changelog-badge">New</div>
+                <div className="changelog-badge">
+                  <Img
+                    alt="Logo"
+                    width={"100px"}
+                    src={"/logo.jpg"}
+                    fallbackSrc="https://via.placeholder.com/150"
+                  />
+                </div>
               </Box>
             </HStack>
             <HStack
