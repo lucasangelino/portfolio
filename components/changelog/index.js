@@ -11,10 +11,9 @@ export default function ChangeLogBadge() {
       account: "yBNaqy",
     };
     script.onload = function () {
-      console.log("loaded");
       window.Headway.init(config);
     };
   }, []);
 
-  return <span className="headway-badge" id="headway-badge"></span>;
+  return <span className="changelog_pos" id="headway-badge"></span>;
 }

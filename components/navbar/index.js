@@ -27,7 +27,6 @@ export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <ChangeLogBadge />
       <Container maxW="container.xl">
         <Box>
           <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
@@ -39,10 +38,15 @@ export default function Navbar() {
               onClick={isOpen ? onClose : onOpen}
             />
             <HStack spacing={8} alignItems={"center"}>
-              <Box>
-                <div className="changelog-badge">
-                  <Img src="/images/logo.svg" alt="Logo" width={50} height={50}/>
-                </div>
+              <Box className="changelog-badge" pos="relative">
+              <ChangeLogBadge />
+                <Img 
+                  src="/images/logo.svg"
+                  alt="Logo"
+                  width={'38px'}
+                  height={'38px'}
+                  pos="absolute"
+                />
               </Box>
             </HStack>
             <HStack
