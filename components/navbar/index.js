@@ -13,11 +13,9 @@ import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import Link from "../links";
 import SwitchDarkMode from "../buttons/darkModeBtn";
 import MobileNav from "../navbar/mobileNav";
-import PopOver from "../popover";
 import ChangeLogBadge from "../changelog/";
+import Logo from "../icons/Logo";
 
-// assets
-import { Logo } from "../../public/logo.jpg";
 
 const links = [
   { id: 2, text: "Acerca de mi", special: false, href: "#aboutMe" },
@@ -43,12 +41,7 @@ export default function Navbar() {
             <HStack spacing={8} alignItems={"center"}>
               <Box>
                 <div className="changelog-badge">
-                  <Img
-                    alt="Logo"
-                    width={"100px"}
-                    src={"/logo.jpg"}
-                    fallbackSrc="https://via.placeholder.com/150"
-                  />
+                  <Img src="/images/logo.svg" alt="Logo" width={50} height={50}/>
                 </div>
               </Box>
             </HStack>
