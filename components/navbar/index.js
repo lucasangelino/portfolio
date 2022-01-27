@@ -38,17 +38,19 @@ export default function Navbar() {
               onClick={isOpen ? onClose : onOpen}
             />
             <HStack spacing={8} alignItems={"center"}>
-              <Box className="changelog-badge" pos="relative">
-              <ChangeLogBadge />
+            <div className="changelog-badge">
+                <ChangeLogBadge />
                 <Img 
                   src="/images/logo.svg"
                   alt="Logo"
-                  width={'38px'}
-                  height={'38px'}
+                  width={'58px'}
+                  height={'58px'}
                   pos="absolute"
                 />
-              </Box>
+              </div>
+            
             </HStack>
+            
             <HStack
               as={"nav"}
               spacing={4}
@@ -60,13 +62,13 @@ export default function Navbar() {
                 </Link>
               ))}
             </HStack>
-
             <SwitchDarkMode />
           </Flex>
 
           {isOpen ? <MobileNav links={links} /> : null}
         </Box>
       </Container>
+      
     </>
   );
 }

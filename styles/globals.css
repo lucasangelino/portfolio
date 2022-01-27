@@ -15,8 +15,14 @@ a {
   box-sizing: border-box;
 }
 
-.changelog_pos {
+#HW_badge_cont {
   position: absolute;
-  left: 30px;
+  left: 25px;
   top: -10px;
+}
+
+.changelog-badge {
+  position: relative;
+  height: 48px;
+  width: 48px;
 }

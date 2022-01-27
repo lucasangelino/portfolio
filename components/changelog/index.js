@@ -15,5 +15,7 @@ export default function ChangeLogBadge() {
     };
   }, []);
 
-  return <span className="changelog_pos" id="headway-badge"></span>;
+  return (
+      <span className="headway-badge" id="headway-badge"></span>
+  );
 }
