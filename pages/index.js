@@ -1,3 +1,4 @@
+import Head from 'next/head'
 // libs
 import { Container, Flex } from "@chakra-ui/layout";
 
@@ -11,6 +12,10 @@ import Freelance from "../components/freelance";
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Lucas Angelino 🐱‍🏍 - Portfolio</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <Navbar />
       <Container maxW="container.xl" py={5}>
         <Flex
