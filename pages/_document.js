@@ -10,9 +10,10 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <link rel="shortcut icon" href="/images/logo.ico" />
+        </Head>
         <body>
-          {/* TODO: get initialColorMode value from theme */}
           <ColorModeScript initialColorMode={"dark"} />
           <Main />
           <NextScript />
