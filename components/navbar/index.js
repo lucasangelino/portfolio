@@ -43,8 +43,8 @@ export default function Navbar() {
                 <Img 
                   src="/images/logo.svg"
                   alt="Logo"
-                  width={'58px'}
-                  height={'58px'}
+                  width={'48px'}
+                  height={'48px'}
                   pos="absolute"
                 />
               </div>
