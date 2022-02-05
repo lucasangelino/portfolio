@@ -16,16 +16,12 @@ const projects = [
   },
 ];
 
-const destacados = [
-  {
-    name: "BBVA App",
-    description: `Una aplicacion de chat para que puedas compartir cosas con tus amigos. Mensajes, gifs, memes y mucho mas`,
-    githubUrl: "https://github.com/lucasangelino/BBVATicket",
-  },
-];
-
 export default function Portfolio() {
   const { BRAND_500 } = brandColor;
+
+  const latestProject = projects.slice(0, 1);
+  const restProjects = projects.slice(1);
+
   return (
     <Container maxW={"7xl"} mt={{ base: 0 }}>
       <Text
@@ -38,12 +34,16 @@ export default function Portfolio() {
       </Text>
       <LatestProject />
 
-      <Text fontSize={{ base: "3xl", md: "6xl" }} color={BRAND_500} mt={10}>
-        Otros proyectos🚀
-      </Text>
-      {projects.map((project, index) => (
-        <ProjectCard key={index} project={project} />
-      ))}
+      {restProjects.length > 0 && (
+        <>
+          <Text fontSize={{ base: "3xl", md: "6xl" }} color={BRAND_500} mt={10}>
+            Otros proyectos🚀
+          </Text>
+          {projects.map((project, index) => (
+            <ProjectCard key={index} project={project} />
+          ))}
+        </>
+      )}
     </Container>
   );
 }
