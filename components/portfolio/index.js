@@ -8,10 +8,14 @@ import { brandColor } from "../../theme/constants";
 
 const projects = [
   {
-    name: "VotAR",
-    desc: `Con esta aplicacion podras crear preguntas y ver las respuestas de tus usuarios en tiempo real. 
-    Los resultado tambien apareceran graficados en la pantalla. Perfecto para presentaciones en tu trabajo!`,
-    img: "votar.png",
+    title: "BBVA",
+    subtitle: "Sistema de Turnos",
+    description: `Si alguna vez fuiste a un BBVA y tomaste un turno, entonces
+    utilizaste este sistema. Es una aplicación web que permite
+    administrar turnos de BBVA. Tanto para clientes como para personal
+    del banco. En este proyecto se utilizó React, NextJS, Chakra UI y
+    MongoDB.`,
+    image: "bbva-portfolio.jpg",
     githubUrl: "https://github.com/",
   },
 ];
@@ -32,7 +36,7 @@ export default function Portfolio() {
       >
         Último projecto ✨
       </Text>
-      <LatestProject />
+      <LatestProject {...latestProject[0]} />
 
       {restProjects.length > 0 && (
         <>
