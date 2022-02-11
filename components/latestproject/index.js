@@ -7,6 +7,7 @@ import {
   Text,
   useColorModeValue,
   Button,
+  Link,
 } from "@chakra-ui/react";
 
 // styles
@@ -23,7 +24,7 @@ export default function LatestProject({
   description,
   githubUrl,
 }) {
-  const { BRAND_500, BRAND_800 } = brandColor;
+  const { BRAND_500, BRAND_700, BRAND_800 } = brandColor;
   return (
     <Stack direction={{ base: "column", md: "row" }} py={{ base: 10, md: 28 }}>
       <Box w={{ base: "100%", md: "50%" }} p={{ base: "0", md: "5" }}>
@@ -50,9 +51,14 @@ export default function LatestProject({
             px={6}
             colorScheme={"red"}
             bg={BRAND_500}
-            _hover={{ bg: BRAND_800 }}
+            _hover={{ bg: BRAND_700 }}
+            _active={{ bg: BRAND_800 }}
+            href={githubUrl}
+            isExternal={true}
           >
-            Github
+            <Link href={githubUrl} isExternal>
+              Github
+            </Link>
           </Button>
           <Text color={"gray.500"}>{description}</Text>
         </Stack>

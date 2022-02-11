@@ -16,7 +16,7 @@ const projects = [
     del banco. En este proyecto se utilizó React, NextJS, Chakra UI y
     MongoDB.`,
     image: "bbva-portfolio.jpg",
-    githubUrl: "https://github.com/",
+    githubUrl: "https://github.com/lucasangelino/BBVATicket",
   },
 ];
 
