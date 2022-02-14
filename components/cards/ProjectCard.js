@@ -12,6 +12,7 @@ import {
   Icon,
   useColorModeValue,
   Divider,
+  Link,
   createIcon,
   useBreakpointValue,
 } from "@chakra-ui/react";
@@ -20,8 +21,9 @@ import {
 import { brandColor } from "../../theme/constants";
 
 export function ProjectCard({ project }) {
+  console.log(project);
   const { BRAND_500, BRAND_800 } = brandColor;
-  const { name, desc, img, githubUrl } = project;
+  const { title, subtitle, description, image, githubUrl } = project;
   return (
     <>
       <Stack
@@ -37,10 +39,10 @@ export function ProjectCard({ project }) {
             fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
           >
             <Text as={"span"} color={"gray.400"}>
-              {name}
+              {title}
             </Text>
           </Heading>
-          <Text color={"gray.500"}>{desc}</Text>
+          <Text color={"gray.500"}>{description}</Text>
           <Stack
             spacing={{ base: 4, sm: 6 }}
             direction={{ base: "column", sm: "row" }}
@@ -57,7 +59,9 @@ export function ProjectCard({ project }) {
               Ver Demo
             </Button>
             <Button rounded={"full"} size={"lg"} fontWeight={"normal"} px={6}>
+            <Link href={githubUrl} isExternal>
               Github
+            </Link>
             </Button>
           </Stack>
         </Stack>
@@ -92,9 +96,7 @@ export function ProjectCard({ project }) {
               align={"center"}
               w={"100%"}
               h={"100%"}
-              src={
-                "https://de.moyens.net/wp-content/uploads/2020/12/So-fuegen-Sie-Ihrem-Discord-Server-Bots-hinzu-scaled.jpg"
-              }
+              src={`/images/${image}`}
             />
           </Box>
         </Flex>

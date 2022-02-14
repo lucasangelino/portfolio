@@ -13,11 +13,20 @@ const projects = [
     description: `Si alguna vez fuiste a un BBVA y tomaste un turno, entonces
     utilizaste este sistema. Es una aplicación web que permite
     administrar turnos de BBVA. Tanto para clientes como para personal
-    del banco. En este proyecto se utilizó React, NextJS, Chakra UI y
+    del banco. En este proyecto se utilizó React, NextJS, Socket.io, Chakra UI y
     MongoDB.`,
     image: "bbva-portfolio.jpg",
-    githubUrl: "https://github.com/lucasangelino/BBVATicket",
+    githubUrl: "https://github.com/lucasangelino/BBVATicket"
   },
+  {
+    title: "Maps",
+    subtitle: "Alternativa a Google Maps",
+    description: `Alguna vez has utilizado Google Maps para compartir ubicacion en tiempo real con tus amigos?
+    Te traigo una buena alternativa. Rápido, facil de usar y con una interfaz amigable. 
+    Es este proyecto se utilizó React, Socker.io y NextUI`,
+    image: "maps.png",
+    githubUrl: "https://github.com/lucasangelino/Maps"
+  }
 ];
 
 export default function Portfolio() {
@@ -43,7 +52,7 @@ export default function Portfolio() {
           <Text fontSize={{ base: "3xl", md: "6xl" }} color={BRAND_500} mt={10}>
             Otros proyectos🚀
           </Text>
-          {projects.map((project, index) => (
+          {restProjects.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
         </>
