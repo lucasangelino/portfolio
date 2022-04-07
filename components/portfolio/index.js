@@ -12,7 +12,7 @@ const projects = [
     subtitle: "Una aplicación web para chatear",
     description:
       "Esta aplicacion de chat fue creada con React, Socket.io, Chakra UI, Context API y MongoDB",
-    image: "chat-login.jpg",
+    image: "chat.PNG",
     githubUrl: "https://github.com/lucasangelino/Ping-Chat",
   },
   {
