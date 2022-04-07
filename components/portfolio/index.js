@@ -8,6 +8,14 @@ import { brandColor } from "../../theme/constants";
 
 const projects = [
   {
+    title: "Chat",
+    subtitle: "Una aplicación web para chatear",
+    description:
+      "Esta aplicacion de chat fue creada con React, Socket.io, Chakra UI, Context API y MongoDB",
+    image: "chat-login.jpg",
+    githubUrl: "https://github.com/lucasangelino/Ping-Chat",
+  },
+  {
     title: "BBVA",
     subtitle: "Sistema de Turnos",
     description: `Si alguna vez fuiste a un BBVA y tomaste un turno, entonces
@@ -16,7 +24,7 @@ const projects = [
     del banco. En este proyecto se utilizó React, NextJS, Socket.io, Chakra UI y
     MongoDB.`,
     image: "bbva-portfolio.jpg",
-    githubUrl: "https://github.com/lucasangelino/BBVATicket"
+    githubUrl: "https://github.com/lucasangelino/BBVATicket",
   },
   {
     title: "Maps",
@@ -25,8 +33,8 @@ const projects = [
     Te traigo una buena alternativa. Rápido, facil de usar y con una interfaz amigable. 
     Es este proyecto se utilizó React, Socker.io y NextUI`,
     image: "maps.png",
-    githubUrl: "https://github.com/lucasangelino/Maps"
-  }
+    githubUrl: "https://github.com/lucasangelino/Maps",
+  },
 ];
 
 export default function Portfolio() {
