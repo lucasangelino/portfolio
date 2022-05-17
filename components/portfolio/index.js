@@ -1,7 +1,21 @@
-import { Container, Text } from "@chakra-ui/react";
-
-import { ProjectCard } from "../cards/ProjectCard";
-import LatestProject from "../latestproject";
+import {
+  Box,
+  Container,
+  Text,
+  Center,
+  Flex,
+  Grid,
+  GridItem,
+  Heading,
+  VStack,
+  Button,
+  Tag,
+  TagLabel,
+  HStack,
+  Link,
+} from "@chakra-ui/react";
+import Image from "next/image";
+import { Project } from "../cards/Project";
 
 // styles
 import { brandColor } from "../../theme/constants";
@@ -40,9 +54,6 @@ const projects = [
 export default function Portfolio() {
   const { BRAND_500 } = brandColor;
 
-  const latestProject = projects.slice(0, 1);
-  const restProjects = projects.slice(1);
-
   return (
     <Container maxW={"7xl"} mt={{ base: 0 }}>
       <Text
@@ -51,20 +62,9 @@ export default function Portfolio() {
         color={BRAND_500}
         mt={{ base: 10, md: 20 }}
       >
-        Último projecto ✨
+        Algunos de mis proyectos
+        <Project />
       </Text>
-      <LatestProject {...latestProject[0]} />
-
-      {restProjects.length > 0 && (
-        <>
-          <Text fontSize={{ base: "3xl", md: "6xl" }} color={BRAND_500} mt={10}>
-            Otros proyectos🚀
-          </Text>
-          {restProjects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
-          ))}
-        </>
-      )}
     </Container>
   );
 }

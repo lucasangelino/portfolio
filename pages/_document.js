@@ -14,7 +14,7 @@ class MyDocument extends Document {
           <link rel="shortcut icon" href="/images/logo.ico" />
         </Head>
         <body>
-          <ColorModeScript initialColorMode={"dark"} />
+          <ColorModeScript initialColorMode={"light"} />
           <Main />
           <NextScript />
         </body>

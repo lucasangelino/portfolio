@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from "next/head";
 // libs
 import { Container, Flex } from "@chakra-ui/layout";
 
@@ -26,10 +26,8 @@ export default function Home() {
           <AboutMe />
           <Portfolio />
           <Abilities />
-          <Freelance />
         </Flex>
       </Container>
     </>
   );
 }
-
