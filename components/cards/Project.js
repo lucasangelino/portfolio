@@ -18,10 +18,14 @@ import {
   WrapItem,
   useBreakpointValue,
   Img,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import Image from "next/image";
+import Github from "../icons/Github";
 
 export function Project() {
+  const iconBg = useColorModeValue("black", "white");
+
   const laptopImageHeigh = useBreakpointValue({
     base: "200px",
     md: "500px",
@@ -257,6 +261,15 @@ export function Project() {
             </Box>
           </GridItem>
         </Grid>
+      </Box>
+
+      <Box my={12}>
+        <VStack>
+          <Github height={50} fill={iconBg} />
+          <Text color="white" fontSize={"lg"}>
+            Mas aquí
+          </Text>
+        </VStack>
       </Box>
     </>
   );
