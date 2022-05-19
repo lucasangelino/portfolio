@@ -17,6 +17,7 @@ import {
   Wrap,
   WrapItem,
   useBreakpointValue,
+  Img,
 } from "@chakra-ui/react";
 import Image from "next/image";
 
@@ -43,6 +44,7 @@ export function Project() {
 
   return (
     <>
+      {/* primera */}
       <Box bgColor={"#715DF2"} borderRadius={15} my={10}>
         <Grid
           templateColumns={{ base: `repeat(1, 1fr)`, md: `repeat(9, 1fr)` }}
@@ -143,10 +145,15 @@ export function Project() {
             px={10}
           >
             <VStack align={"right"} spacing={{ base: "10px", md: "40px" }}>
-              <Heading color={"white"} mb={5} size="3xl" as={"h1"}>
+              <Heading
+                color={"white"}
+                mb={5}
+                size={{ base: "2xl", md: "3xl" }}
+                as={"h1"}
+              >
                 Gifs
               </Heading>
-              <Text color={"white"} fontSize="3xl">
+              <Text color={"white"} fontSize={{ base: "2xl", md: "3xl" }}>
                 {" "}
                 Esta aplicacion permite buscar Gifs animados en la web. Puedes
                 copiarlos y compartirlos por whatsapp o cualquier otra red
@@ -156,32 +163,50 @@ export function Project() {
                 Demo
               </Text>
               <HStack spacing={1}>
-                {["React", "Giphy", "Css", "Html"].map((size, index) => (
-                  <Tag
-                    size={"lg"}
-                    key={index}
-                    borderRadius="full"
-                    variant="outline"
-                    colorScheme="blackAlpha"
-                  >
-                    <TagLabel>{size}</TagLabel>
-                  </Tag>
-                ))}
+                <Wrap>
+                  {["React", "Socket.io", "Css", "Html", "Chakra ui"].map(
+                    (size, index) => (
+                      <WrapItem key={index}>
+                        <Tag
+                          size={"lg"}
+                          key={index}
+                          borderRadius="full"
+                          variant="outline"
+                          colorScheme="blackAlpha"
+                        >
+                          <TagLabel>{size}</TagLabel>
+                        </Tag>
+                      </WrapItem>
+                    )
+                  )}
+                </Wrap>
               </HStack>
             </VStack>
           </GridItem>
         </Grid>
       </Box>
 
-      {/* tercera
+      {/* tercera */}
       <Box bgColor={"#051C2C"} borderRadius={15} my={12}>
-        <Grid templateColumns="repeat(9, 1fr)" gap={4}>
-          <GridItem colSpan={4} py={20} px={10}>
-            <VStack align={"left"} spacing="40px">
-              <Heading color={"white"} mb={5} size="3xl" as={"h1"}>
+        <Grid
+          templateColumns={{ base: `repeat(1, 1fr)`, md: `repeat(9, 1fr)` }}
+          gap={4}
+        >
+          <GridItem
+            colSpan={{ base: 1, md: 4 }}
+            py={{ base: 5, md: 20 }}
+            px={10}
+          >
+            <VStack align={"left"} spacing={{ base: "10px", md: "40px" }}>
+              <Heading
+                color={"white"}
+                mb={5}
+                size={{ base: "2xl", md: "3xl" }}
+                as={"h1"}
+              >
                 Tickets de BBVA
               </Heading>
-              <Text color={"white"} fontSize="3xl">
+              <Text color={"white"} fontSize={{ base: "2xl", md: "3xl" }}>
                 {" "}
                 Esta aplicacion fue creada para administrar turnos de BBVA. Los
                 clientes pueden tomar turnos, los empleados pueden ver los
@@ -191,35 +216,48 @@ export function Project() {
                 Demo
               </Text>
               <HStack spacing={1}>
-                {["React", "Socket.io", "Css", "Html", "Chakra ui"].map(
-                  (size, index) => (
-                    <Tag
-                      size={"lg"}
-                      key={index}
-                      borderRadius="full"
-                      variant="outline"
-                      colorScheme="blackAlpha"
-                    >
-                      <TagLabel>{size}</TagLabel>
-                    </Tag>
-                  )
-                )}
+                <Wrap>
+                  {["React", "Socket.io", "Css", "Html", "Chakra ui"].map(
+                    (size, index) => (
+                      <WrapItem key={index}>
+                        <Tag
+                          size={"lg"}
+                          key={index}
+                          borderRadius="full"
+                          variant="outline"
+                          colorScheme="whiteAlpha"
+                        >
+                          <TagLabel>{size}</TagLabel>
+                        </Tag>
+                      </WrapItem>
+                    )
+                  )}
+                </Wrap>
               </HStack>
             </VStack>
           </GridItem>
-          <GridItem colSpan={5} bg="#051C2C" marginLeft={5} borderRadius={15}>
-            <Box>
+          <GridItem
+            colSpan={{ base: 1, md: 5 }}
+            bg="#051C2C"
+            marginLeft={4}
+            borderRadius={15}
+          >
+            <Box
+              marginTop={{ base: 2, md: 20 }}
+              marginLeft={{ base: 0, md: 10 }}
+            >
               <Image
-                src="/images/maps-pc-no-bg.png"
-                height="900"
-                width="1000"
+                src="/images/maps.png"
+                height={laptopImageHeigh}
+                width={laptopImageWidth}
                 layout="fixed"
                 alt="image"
+                style={{ borderRadius: 20 }}
               />
             </Box>
           </GridItem>
         </Grid>
-      </Box> */}
+      </Box>
     </>
   );
 }
