@@ -20,6 +20,7 @@ import {
   Img,
   useColorModeValue,
 } from "@chakra-ui/react";
+
 import Image from "next/image";
 import Github from "../icons/Github";
 
@@ -64,7 +65,6 @@ export function Project() {
                 color={"white"}
                 mb={{ base: 0, md: 5 }}
                 size={{ base: "2xl", md: "3xl" }}
-                as={"h1"}
               >
                 Tickets de BBVA
               </Heading>
@@ -104,7 +104,10 @@ export function Project() {
             py={{ base: 5, md: 30 }}
             borderRadius={15}
           >
-            <Box marginLeft={{ base: 4, md: 10 }}>
+            <Box
+              marginLeft={{ base: 7, md: 10 }}
+              marginTop={{ base: 0, md: 55 }}
+            >
               {/* <Center> */}
               <Image
                 src="/images/ticket-with.notebook.png"
@@ -133,7 +136,7 @@ export function Project() {
             marginRight={{ base: 10, md: 20 }}
             borderRadius={15}
           >
-            <Box marginLeft={{ base: 4, md: 10 }}>
+            <Box marginLeft={{ base: 7, md: 10 }}>
               <Image
                 src="/images/gifinder-mobile.jpg"
                 height={mobileImageHeigh || "370px"}
@@ -149,12 +152,7 @@ export function Project() {
             px={10}
           >
             <VStack align={"right"} spacing={{ base: "10px", md: "40px" }}>
-              <Heading
-                color={"white"}
-                mb={5}
-                size={{ base: "2xl", md: "3xl" }}
-                as={"h1"}
-              >
+              <Heading color={"white"} mb={5} size={{ base: "2xl", md: "3xl" }}>
                 Gifs
               </Heading>
               <Text color={"white"} fontSize={{ base: "2xl", md: "3xl" }}>
@@ -202,12 +200,7 @@ export function Project() {
             px={10}
           >
             <VStack align={"left"} spacing={{ base: "10px", md: "40px" }}>
-              <Heading
-                color={"white"}
-                mb={5}
-                size={{ base: "2xl", md: "3xl" }}
-                as={"h1"}
-              >
+              <Heading color={"white"} mb={5} size={{ base: "2xl", md: "3xl" }}>
                 Tickets de BBVA
               </Heading>
               <Text color={"white"} fontSize={{ base: "2xl", md: "3xl" }}>
