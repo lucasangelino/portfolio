@@ -7,7 +7,7 @@ import {
   VStack,
   Text,
 } from "@chakra-ui/layout";
-import { Image, AspectRatio } from "@chakra-ui/react";
+import { Image } from "@chakra-ui/react";
 import { useBreakpointValue } from "@chakra-ui/media-query";
 
 export default function AboutMe() {

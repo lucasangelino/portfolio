@@ -104,8 +104,8 @@ export function Project() {
               {/* <Center> */}
               <Image
                 src="/images/ticket-with.notebook.png"
-                height={laptopImageHeigh}
-                width={laptopImageWidth}
+                height={laptopImageHeigh || "200px"}
+                width={laptopImageWidth || "270px"}
                 layout="fixed"
                 alt="image"
               />
@@ -132,8 +132,8 @@ export function Project() {
             <Box marginLeft={{ base: 4, md: 10 }}>
               <Image
                 src="/images/gifinder-mobile.jpg"
-                height={mobileImageHeigh}
-                width={mobileImageWidth}
+                height={mobileImageHeigh || "370px"}
+                width={mobileImageWidth || "225px"}
                 layout="fixed"
                 alt="image"
               />
@@ -248,8 +248,8 @@ export function Project() {
             >
               <Image
                 src="/images/maps.png"
-                height={laptopImageHeigh}
-                width={laptopImageWidth}
+                height={laptopImageHeigh || "200px"}
+                width={laptopImageWidth || "270px"}
                 layout="fixed"
                 alt="image"
                 style={{ borderRadius: 20 }}

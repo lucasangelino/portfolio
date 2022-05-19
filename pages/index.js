@@ -9,6 +9,7 @@ import AboutMe from "../components/about";
 import Portfolio from "../components/portfolio";
 import Abilities from "../components/abilities";
 import Freelance from "../components/freelance";
+import Snippets from "../components/snippets";
 
 export default function Home() {
   return (
@@ -25,16 +26,13 @@ export default function Home() {
 
       <Navbar />
       <Container maxW="container.xl" py={5}>
-        <Flex
-          h={{ base: "auto", md: "100vh" }}
-          py={{ base: 0, md: 5 }}
-          direction={"column"}
-        >
+        <Flex py={{ base: 0, md: 5 }} direction={"column"}>
           <AboutMe />
           <Portfolio />
-          <Abilities />
         </Flex>
       </Container>
+      <Snippets />
+      <Abilities />
     </>
   );
 }
