@@ -22,7 +22,8 @@ export default function Freelance() {
       pt={10}
       justifyContent={"center"}
       direction={"column"}
-      width={"full"}
+      // bgColor={"#051C2C"}
+      width="100%"
     >
       <Box width={{ base: "full", sm: "lg", lg: "xl" }} margin={"auto"}>
         <Text
@@ -31,17 +32,11 @@ export default function Freelance() {
           fontSize="6xl"
           fontWeight="extrabold"
         >
-          Tambien trabajo como Freelancer
+          Tambien hago desarrollo freelance
         </Text>
-        <chakra.h2
-          py={5}
-          fontSize={40}
-          fontFamily={"Work Sans"}
-          fontWeight={"bold"}
-          color={useColorModeValue("gray.700", "gray.50")}
-        >
+        {/* <Text py={5} fontSize={40} fontWeight={"bold"} color={"brand.600"}>
           Puedes contactarme a través
-        </chakra.h2>
+        </Text> #DA1558*/}
       </Box>
       <HStack
         justifyContent={"center"}
