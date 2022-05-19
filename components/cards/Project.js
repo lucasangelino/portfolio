@@ -21,14 +21,24 @@ import {
 import Image from "next/image";
 
 export function Project() {
-  const imageHeigh = useBreakpointValue({
+  const laptopImageHeigh = useBreakpointValue({
     base: "200px",
     md: "500px",
   });
 
-  const imageWidth = useBreakpointValue({
+  const laptopImageWidth = useBreakpointValue({
     base: "270px",
     md: "900px",
+  });
+
+  const mobileImageHeigh = useBreakpointValue({
+    base: "370px",
+    md: "600px",
+  });
+
+  const mobileImageWidth = useBreakpointValue({
+    base: "225px",
+    md: "350px",
   });
 
   return (
@@ -92,8 +102,8 @@ export function Project() {
               {/* <Center> */}
               <Image
                 src="/images/ticket-with.notebook.png"
-                height={imageHeigh}
-                width={imageWidth}
+                height={laptopImageHeigh}
+                width={laptopImageWidth}
                 layout="fixed"
                 alt="image"
               />
@@ -104,26 +114,35 @@ export function Project() {
       </Box>
 
       {/* segunda */}
-      {/* <Box bgColor={"#DA1558"} borderRadius={15} my={12}>
-        <Grid templateColumns="repeat(8, 1fr)" gap={4}>
+      <Box bgColor={"#DA1558"} borderRadius={15} my={12}>
+        <Grid
+          templateColumns={{ base: `repeat(1, 1fr)`, md: `repeat(9, 1fr)` }}
+          gap={{ base: 1, md: 4 }}
+        >
           <GridItem
-            colSpan={4}
+            colSpan={{ base: 1, md: 4 }}
             bg="#DA1558"
             py={30}
-            paddingLeft={100}
-            marginRight={20}
+            paddingLeft={{ base: 7, md: 100 }}
+            marginRight={{ base: 10, md: 20 }}
             borderRadius={15}
           >
-            <Image
-              src="/images/gifinder-mobile.jpg"
-              height="600"
-              width="350"
-              layout="fixed"
-              alt="image"
-            />
+            <Box marginLeft={{ base: 4, md: 10 }}>
+              <Image
+                src="/images/gifinder-mobile.jpg"
+                height={mobileImageHeigh}
+                width={mobileImageWidth}
+                layout="fixed"
+                alt="image"
+              />
+            </Box>
           </GridItem>
-          <GridItem colSpan={4} py={20} px={10}>
-            <VStack align={"right"} spacing="40px">
+          <GridItem
+            colSpan={{ base: 1, md: 4 }}
+            py={{ base: 2, md: 20 }}
+            px={10}
+          >
+            <VStack align={"right"} spacing={{ base: "10px", md: "40px" }}>
               <Heading color={"white"} mb={5} size="3xl" as={"h1"}>
                 Gifs
               </Heading>
@@ -152,7 +171,7 @@ export function Project() {
             </VStack>
           </GridItem>
         </Grid>
-      </Box> */}
+      </Box>
 
       {/* tercera
       <Box bgColor={"#051C2C"} borderRadius={15} my={12}>
