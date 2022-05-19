@@ -20,7 +20,7 @@ export default function Home() {
 
       <Alert status="info">
         <AlertIcon />
-        Sitio en mantenimiento | Site under maintenance
+        Sitio en mantenimiento
       </Alert>
 
       <Navbar />

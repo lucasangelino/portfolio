@@ -85,11 +85,11 @@ export function Project() {
           <GridItem
             colSpan={{ base: 1, md: 4 }}
             bg="#715DF2"
-            py={{ base: 0, md: 30 }}
-            marginLeft={3}
+            py={{ base: 5, md: 30 }}
             borderRadius={15}
           >
-            <Box marginTop={{ base: 0, md: 10 }}>
+            <Box marginLeft={{ base: 4, md: 10 }}>
+              {/* <Center> */}
               <Image
                 src="/images/ticket-with.notebook.png"
                 height={imageHeigh}
@@ -97,6 +97,7 @@ export function Project() {
                 layout="fixed"
                 alt="image"
               />
+              {/* </Center> */}
             </Box>
           </GridItem>
         </Grid>
