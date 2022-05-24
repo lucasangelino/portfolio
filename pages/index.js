@@ -31,7 +31,7 @@ export default function Home() {
           <Portfolio />
         </Flex>
       </Container>
-      <Snippets />
+      {/* <Snippets /> */}
       <Abilities />
       <Freelance />
     </>

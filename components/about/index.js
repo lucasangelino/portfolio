@@ -39,9 +39,9 @@ export default function AboutMe() {
             Me gusta ayudar a las personas a mejorar el mundo mediante software
             de calidad.
           </Text>
-          <Text fontSize="xl" color={"gray.400"} my={10}>
+          {/* <Text fontSize="xl" color={"gray.400"} my={10}>
             Tambien soy un estusiasta de los deportes y del montañismo!
-          </Text>
+          </Text> */}
         </GridItem>
         <GridItem colSpan={colSpan}>
           {/* <AspectRatio maxW="500px" ratio={3 / 4}> */}

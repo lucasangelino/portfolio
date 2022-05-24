@@ -52,11 +52,15 @@ export function Project() {
       {/* primera */}
       <Box bgColor={"#715DF2"} borderRadius={15} my={10}>
         <Grid
-          templateColumns={{ base: `repeat(1, 1fr)`, md: `repeat(9, 1fr)` }}
+          templateColumns={{
+            base: `repeat(1, 1fr)`,
+            sm: `repeat(1, 1fr)`,
+            lg: `repeat(9, 1fr)`,
+          }}
           gap={{ base: 1, md: 4 }}
         >
           <GridItem
-            colSpan={{ base: 1, md: 4 }}
+            colSpan={{ base: 1, lg: 4 }}
             py={{ base: 5, md: 20 }}
             px={10}
           >
@@ -99,31 +103,63 @@ export function Project() {
             </VStack>
           </GridItem>
           <GridItem
-            colSpan={{ base: 1, md: 4 }}
+            colSpan={{ base: 1, lg: 5 }}
             bg="#715DF2"
             py={{ base: 5, md: 30 }}
+            px={2}
             borderRadius={15}
+            // bgColor={"#715DA8"}
           >
-            <Box
-              marginLeft={{ base: 7, md: 10 }}
-              marginTop={{ base: 0, md: 55 }}
+            <Center w="100%">
+              <Box
+                w="100%"
+                h={{ base: "250px", md: "450px", lg: "700px" }}
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                position={"relative"}
+                // bgColor="#e3e3e3"
+              >
+                <Box
+                  w={{ base: "100%", md: "100%", lg: "850px" }}
+                  position={"absolute"}
+                  height={{ base: "230px", md: "460px", lg: "550px" }}
+                  left={{ base: "0", md: "0", lg: "50" }}
+                  // bgColor="#a3a3a3"
+                >
+                  <Image
+                    src="/images/ticket-with.notebook.png"
+                    layout="fill"
+                    alt="image"
+                  />
+                </Box>
+              </Box>
+            </Center>
+
+            {/* <Box
+              // marginLeft={{ base: 2, md: 10 }}
+              marginTop={{ base: 0, md: "50" }}
+              display={{ base: "flex", md: "block" }}
+              justifyContent="center"
+              width={{ base: "100%", md: "100%" }}
+              height={{ base: "20px", md: "63%" }}
+              position="relative"
+              // bgColor={"whiteAlpha.400"}
             >
-              {/* <Center> */}
               <Image
                 src="/images/ticket-with.notebook.png"
-                height={laptopImageHeigh || "200px"}
-                width={laptopImageWidth || "270px"}
-                layout="fixed"
+                // height={laptopImageHeigh || "200px"}
+                // width={laptopImageWidth || "270px"}
+                layout="fill"
                 alt="image"
               />
-              {/* </Center> */}
-            </Box>
+            </Box> */}
           </GridItem>
         </Grid>
       </Box>
 
       {/* segunda */}
-      <Box bgColor={"#DA1558"} borderRadius={15} my={12}>
+      {/* <Box bgColor={"#DA1558"} borderRadius={15} my={12}>
         <Grid
           templateColumns={{ base: `repeat(1, 1fr)`, md: `repeat(9, 1fr)` }}
           gap={{ base: 1, md: 4 }}
@@ -186,10 +222,10 @@ export function Project() {
             </VStack>
           </GridItem>
         </Grid>
-      </Box>
+      </Box> */}
 
       {/* tercera */}
-      <Box bgColor={"#051C2C"} borderRadius={15} my={12}>
+      {/* <Box bgColor={"#051C2C"} borderRadius={15} my={12}>
         <Grid
           templateColumns={{ base: `repeat(1, 1fr)`, md: `repeat(9, 1fr)` }}
           gap={4}
@@ -254,16 +290,16 @@ export function Project() {
             </Box>
           </GridItem>
         </Grid>
-      </Box>
+      </Box> */}
 
-      <Box my={12}>
+      {/* <Box my={12}>
         <VStack>
           <Github height={50} fill={iconBg} />
           <Text color="white" fontSize={"lg"}>
             Mas aquí
           </Text>
         </VStack>
-      </Box>
+      </Box> */}
     </>
   );
 }
