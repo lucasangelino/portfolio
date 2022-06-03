@@ -27,15 +27,15 @@ export default function Home() {
       <Navbar />
       <Container maxW={"container.xl"} py={5}>
         <Flex py={{ base: 0, md: 5 }} direction={"column"}>
-          {/* <AboutMe /> */}
-          {/* <Portfolio /> */}
+          <AboutMe />
+          <Portfolio />
           <ListOfProjects />
-          {/* <BlogBanner /> */}
+          <BlogBanner />
         </Flex>
       </Container>
-      {/* <Snippets />
+      <Snippets />
       <Abilities />
-      <Freelance /> */}
+      <Freelance />
     </>
   );
 }
