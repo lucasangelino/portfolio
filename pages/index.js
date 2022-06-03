@@ -10,6 +10,8 @@ import Portfolio from "../components/portfolio";
 import Abilities from "../components/abilities";
 import Freelance from "../components/freelance";
 import Snippets from "../components/snippets";
+import MantainanceBanner from "../components/banners/MantainanceBanner";
+import BlogBanner from "../components/banners/BlogBanner";
 
 export default function Home() {
   return (
@@ -19,21 +21,19 @@ export default function Home() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <Alert status="info">
-        <AlertIcon />
-        Sitio en mantenimiento
-      </Alert>
+      <MantainanceBanner />
 
       <Navbar />
-      <Container maxW="container.xl" py={5}>
+      <Container maxW={"container.xl"} py={5}>
         <Flex py={{ base: 0, md: 5 }} direction={"column"}>
           <AboutMe />
           <Portfolio />
+          <BlogBanner />
         </Flex>
       </Container>
       {/* <Snippets /> */}
-      <Abilities />
-      <Freelance />
+      {/* <Abilities />
+      <Freelance /> */}
     </>
   );
 }

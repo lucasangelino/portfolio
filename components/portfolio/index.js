@@ -55,7 +55,7 @@ export default function Portfolio() {
   const { BRAND_500 } = brandColor;
 
   return (
-    <Container maxW={"7xl"} mt={{ base: 0 }}>
+    <Container maxW={"7xl"} paddingX="0px" mt={{ base: 0 }}>
       <Text
         id="portfolio"
         fontSize={{ base: "3xl", md: "6xl" }}
