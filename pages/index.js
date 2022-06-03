@@ -12,6 +12,7 @@ import Freelance from "../components/freelance";
 import Snippets from "../components/snippets";
 import MantainanceBanner from "../components/banners/MantainanceBanner";
 import BlogBanner from "../components/banners/BlogBanner";
+import ListOfProjects from "../components/portfolio/ListOfProjects";
 
 export default function Home() {
   return (
@@ -26,13 +27,14 @@ export default function Home() {
       <Navbar />
       <Container maxW={"container.xl"} py={5}>
         <Flex py={{ base: 0, md: 5 }} direction={"column"}>
-          <AboutMe />
-          <Portfolio />
-          <BlogBanner />
+          {/* <AboutMe /> */}
+          {/* <Portfolio /> */}
+          <ListOfProjects />
+          {/* <BlogBanner /> */}
         </Flex>
       </Container>
-      {/* <Snippets /> */}
-      {/* <Abilities />
+      {/* <Snippets />
+      <Abilities />
       <Freelance /> */}
     </>
   );

@@ -58,7 +58,12 @@ export function Project() {
                 turnos que tienen asignados y administrarlos.
               </Text>
               <Text fontSize={"20px"} color={"white"} decoration="underline">
-                Demo
+                <Link
+                  href="https://github.com/lucasangelino/BBVATicket"
+                  isExternal
+                >
+                  Demo
+                </Link>
               </Text>
               <HStack spacing={1}>
                 <Wrap>
@@ -96,14 +101,12 @@ export function Project() {
                 justifyContent="center"
                 alignItems="center"
                 position={"relative"}
-                // bgColor="#e3e3e3"
               >
                 <Box
                   w={{ base: "100%", md: "100%", lg: "850px" }}
                   position={"absolute"}
                   height={{ base: "230px", md: "460px", lg: "550px" }}
                   left={{ base: "0", md: "0", lg: "50" }}
-                  // bgColor="#a3a3a3"
                 >
                   <Image
                     src="/images/ticket-with.notebook.png"

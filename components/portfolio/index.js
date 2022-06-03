@@ -62,7 +62,7 @@ export default function Portfolio() {
         color={BRAND_500}
         mt={{ base: 10, md: 20 }}
       >
-        Proyectos
+        Ultimo proyecto
         <Project />
       </Text>
     </Container>
