@@ -45,11 +45,7 @@ export default function AboutMe() {
         </GridItem>
         <GridItem colSpan={colSpan}>
           {/* <AspectRatio maxW="500px" ratio={3 / 4}> */}
-          <Image
-            src="https://kentcdodds.com/img/image/upload/w_900,q_auto,f_auto/kentcdodds.com/illustrations/kody-flying_red"
-            alt="naruto"
-            objectFit="cover"
-          />
+          <Image src="/images/me.webp" alt="naruto" objectFit="cover" />
           {/* </AspectRatio> */}
         </GridItem>
       </Grid>

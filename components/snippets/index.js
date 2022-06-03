@@ -19,7 +19,7 @@ export default function Snippets() {
           fontSize={{ base: "4xl", sm: "4xl", md: "6xl" }}
           color={"brand.500"}
         >
-          Entusiasta del software libre
+          Entusiasta de compartir conocimiento
         </Heading>
 
         <Flex

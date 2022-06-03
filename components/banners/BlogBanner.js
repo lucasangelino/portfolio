@@ -20,6 +20,7 @@ export default function BlogBanner() {
       paddingX={{ base: 2, md: 40 }}
       borderRadius={10}
       justify="space-between"
+      marginY={5}
     >
       <Box
         display="flex"
