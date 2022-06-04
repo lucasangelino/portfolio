@@ -48,7 +48,7 @@ export default function ListOfProjects() {
             padding={1}
             borderRadius="md"
           >
-            Proximamente
+            Proximamente +
           </Text>
         </Heading>
       </Box>
@@ -97,7 +97,7 @@ export default function ListOfProjects() {
           ))}
         </Grid>
       </Box>
-      <Divider marginBottom={5} />
+      <Divider marginBottom={{ base: 2, sm: 20 }} />
     </>
   );
 }

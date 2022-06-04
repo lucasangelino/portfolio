@@ -28,8 +28,8 @@ export default function BlogBanner() {
         flexDirection={"column"}
         marginY="auto"
       >
-        <Heading>Visita mi blog y descucbrí muchos</Heading>
-        <Heading>articulos de diferentes </Heading>
+        <Heading>Visita mi blog y descucbre muchos</Heading>
+        <Heading>artículos de diferentes </Heading>
         <Heading>tecnologia. </Heading>
         <Box marginTop={5}>
           <Link href="https://lucasangelino.github.com" isExternal>
