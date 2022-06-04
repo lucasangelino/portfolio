@@ -33,9 +33,25 @@ export default function ListOfProjects() {
   return (
     <>
       <Divider marginBottom={5} />
-      <Heading marginBottom={{ base: 0, sm: 2, md: 10 }}>
-        Todos los proyectos
-      </Heading>
+      <Box>
+        <Heading
+          marginBottom={{ base: 0, sm: 2, md: 10 }}
+          position={"relative"}
+        >
+          Todos los proyectos
+          <Text
+            fontSize={"sm"}
+            position={"absolute"}
+            top="0"
+            right={0}
+            bgColor="tomato"
+            padding={1}
+            borderRadius="md"
+          >
+            Proximamente
+          </Text>
+        </Heading>
+      </Box>
       <Box>
         <Grid
           templateColumns={{

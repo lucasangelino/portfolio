@@ -32,7 +32,7 @@ export default function BlogBanner() {
         <Heading>articulos de diferentes </Heading>
         <Heading>tecnologia. </Heading>
         <Box marginTop={5}>
-          <Link href="https://chakra-ui.com" isExternal>
+          <Link href="https://lucasangelino.github.com" isExternal>
             <Button variant="outline" colorScheme="gray">
               Ir al blog
             </Button>
