@@ -16,6 +16,11 @@ import ListOfProjects from "../components/portfolio/ListOfProjects";
 
 export default function Home() {
   return (
+    // TODO:
+    // Mejorar imagenes de proyectos
+    // Mejorar FreeLance
+    // Mejorar Mobile
+
     <>
       <Head>
         <title>Lucas Angelino 🐱‍🏍 - Portfolio</title>
