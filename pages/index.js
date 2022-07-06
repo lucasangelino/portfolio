@@ -22,19 +22,18 @@ export default function Home() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <MantainanceBanner />
-      {/* 
-      <Navbar /> */}
-      {/* <Container maxW={"container.xl"} py={5}>
+      {/* <MantainanceBanner /> */}
+      <Navbar />
+      <Container maxW={"container.xl"} py={5}>
         <Flex py={{ base: 0, md: 5 }} direction={"column"}>
           <AboutMe />
           <ListOfProjects />
           <BlogBanner />
         </Flex>
-      </Container> */}
+      </Container>
       <Snippets />
-      {/* <Abilities /> */}
-      {/* <Freelance /> */}
+      <Abilities />
+      <Freelance />
     </>
   );
 }

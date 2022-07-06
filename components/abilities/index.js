@@ -22,12 +22,12 @@ export default function Abilities() {
   const { BRAND_500 } = brandColor;
 
   return (
-    <Container maxW={"7xl"} my={{ base: 10, md: 100 }}>
-      {/* <Text fontSize="6xl" color={BRAND_500} mb={20} align={"center"}>
-        Tecnologías
-      </Text> */}
+    <Container maxW={"4xl"} my={{ base: 10, md: 20 }}>
+      <Text fontSize="4xl" color={BRAND_500} mb={20} align={"center"}>
+        Skills
+      </Text>
       <Center>
-        <Wrap spacing="60px" justify="center">
+        <Wrap spacing="32px" justify="center">
           {/* Javascript */}
           <WrapItem>
             <JavaScript width={100} height={100} />
