@@ -17,7 +17,7 @@ export default function BlogBanner() {
       width={"100%"}
       bgColor="#0092E5"
       paddingY={2}
-      paddingX={{ base: 2, md: 40 }}
+      paddingX={{ base: 5, md: 40 }}
       borderRadius={10}
       justify="space-between"
       marginY={5}
@@ -27,10 +27,10 @@ export default function BlogBanner() {
         justifyContent="center"
         flexDirection={"column"}
         marginY="auto"
+        color="white"
       >
         <Heading>Visita mi blog y descucbre muchos</Heading>
-        <Heading>artículos de diferentes </Heading>
-        <Heading>tecnologia. </Heading>
+        <Heading>artículos de tecnologia.</Heading>
         <Box marginTop={5}>
           <Link href="https://lucasangelino.github.com" isExternal>
             <Button variant="outline" colorScheme="gray">
