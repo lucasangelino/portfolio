@@ -12,11 +12,11 @@ import {
 
 export default function Snippets() {
   return (
-    <Box width={"100%"} bgImage={`/images/snippet-back2.svg`} py={15} my={15}>
+    <Box bgImage={`/images/snippet-back2.svg`} py={15} my={15}>
       <Container maxW="container.xl" py={5} centerContent>
         <Heading
           mb={10}
-          fontSize={{ base: "4xl", sm: "4xl", md: "6xl" }}
+          fontSize={{ base: "2xl", sm: "3xl", md: "5xl" }}
           color={"brand.500"}
         >
           Entusiasta de compartir conocimiento
@@ -37,7 +37,6 @@ export default function Snippets() {
           </Box>
           <Box
             bgColor={"#051C2C"}
-            width={200}
             padding={5}
             borderRadius={20}
             marginLeft={10}
@@ -63,7 +62,6 @@ export default function Snippets() {
         >
           <Box
             bgColor={"#051C2C"}
-            width={200}
             padding={5}
             borderRadius={20}
             marginRight={10}
