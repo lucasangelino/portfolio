@@ -23,7 +23,7 @@ export default function Snippets() {
         </Heading>
 
         <Flex
-          direction={{ base: "colum", md: "row" }}
+          direction={{ base: "column", sm: "column", md: "column", lg: "row" }}
           alignItems="center"
           marginTop={10}
         >
@@ -57,7 +57,7 @@ export default function Snippets() {
         </Flex>
 
         <Flex
-          direction={{ base: "colum", md: "row" }}
+          direction={{ base: "column", sm: "column", md: "column", lg: "row" }}
           alignItems="center"
           marginTop={10}
         >
