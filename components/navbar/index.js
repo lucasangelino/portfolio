@@ -15,7 +15,9 @@ import SwitchDarkMode from "../buttons/darkModeBtn";
 import MobileNav from "../navbar/mobileNav";
 import ChangeLogBadge from "../changelog/";
 import Logo from "../icons/Logo";
-
+import Github from "../icons/Github";
+import Gmail from "../icons/Gmail";
+import Linkedin from "../icons/Linkedin";
 
 const links = [
   { id: 2, text: "Acerca de mi", special: false, href: "#aboutMe" },
@@ -38,19 +40,18 @@ export default function Navbar() {
               onClick={isOpen ? onClose : onOpen}
             />
             <HStack spacing={8} alignItems={"center"}>
-            <div className="changelog-badge">
+              <div className="changelog-badge">
                 <ChangeLogBadge />
-                <Img 
+                <Img
                   src="/images/logo.svg"
                   alt="Logo"
-                  width={'48px'}
-                  height={'48px'}
+                  width={"48px"}
+                  height={"48px"}
                   pos="absolute"
                 />
               </div>
-            
             </HStack>
-            
+
             <HStack
               as={"nav"}
               spacing={4}
@@ -62,13 +63,26 @@ export default function Navbar() {
                 </Link>
               ))}
             </HStack>
+            <HStack justifyContent={"center"} spacing={"5px"} px={2}>
+              <Link href="mailto:angelino.n.lucas@gmail.com?subject=Freelance Job">
+                <Gmail width={25} />
+              </Link>
+              <Link href="https://github.com/lucasangelino" isExternal>
+                <Github width={25} />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/in/lucas-nicolas-angelino/"
+                isExternal
+              >
+                <Linkedin width={25} />
+              </Link>
+            </HStack>
             <SwitchDarkMode />
           </Flex>
 
           {isOpen ? <MobileNav links={links} /> : null}
         </Box>
       </Container>
-      
     </>
   );
 }
