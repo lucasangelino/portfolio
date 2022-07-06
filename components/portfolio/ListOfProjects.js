@@ -18,6 +18,7 @@ const projects = [
     desc: "Aplicacion que permite la gestion de tickets del banco BBVA. Crea nuevos escritorios de trabajo, abre y cierra tickets",
     githubUrl: "https://github.com/lucasangelino/gifinder",
     imgUrl: "/images/bbva-portfolio.jpg",
+    tags: ["React", "NodeJS", "Express", "MongoDB", "ChakraUI"],
     rtl: false,
   },
   {
@@ -25,13 +26,15 @@ const projects = [
     desc: "Esta aplicacion de Chat te permite enviar mensajes a tus amigos, y recibir mensajes de ellos",
     githubUrl: "https://github.com/lucasangelino/gifinder",
     imgUrl: "/images/chat-login.jpg",
+    tags: ["React", "NodeJS", "Express", "MongoDB", "ChakraUI"],
     rtl: true,
   },
   {
     title: "Gifs",
     desc: "La aplicacion definitiva para buscar  y compartir gifs con tus amigos",
     githubUrl: "https://github.com/lucasangelino/gifinder",
-    imgUrl: "/images/bbva-portfolio.jpg",
+    imgUrl: "/images/gif2.png",
+    tags: ["React", "NodeJS", "Express", "MongoDB", "ChakraUI"],
     rtl: false,
   },
 ];

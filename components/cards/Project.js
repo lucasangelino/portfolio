@@ -12,8 +12,11 @@ import {
   createIcon,
   IconProps,
   useColorModeValue,
+  Link,
+  Tag,
+  TagLabel,
+  HStack,
 } from "@chakra-ui/react";
-import Link from "next/link";
 
 export default function Project({
   title,
@@ -21,6 +24,7 @@ export default function Project({
   imgUrl,
   githubUrl,
   demoUrl,
+  tags,
   rtl,
 }) {
   return (
@@ -42,11 +46,18 @@ export default function Project({
             </Text>
           </Heading>
           <Text color={"gray.500"}>{desc}</Text>
+          <HStack spacing={2}>
+            {tags.map((tag, index) => (
+              <Tag size={"sm"} key={index} variant="subtle" colorScheme="blue">
+                <TagLabel>{tag}</TagLabel>
+              </Tag>
+            ))}
+          </HStack>
           <Stack
             spacing={{ base: 4, sm: 6 }}
             direction={{ base: "column", sm: "row" }}
           >
-            <Link href={"/demo"}>
+            <Link href={demoUrl} isExternal>
               <Button
                 rounded={"full"}
                 size={"lg"}
@@ -59,7 +70,7 @@ export default function Project({
                 Demo
               </Button>
             </Link>
-            <Link href={githubUrl}>
+            <Link href={githubUrl} isExternal>
               <Button rounded={"full"} size={"lg"} fontWeight={"normal"} px={6}>
                 Github
               </Button>
