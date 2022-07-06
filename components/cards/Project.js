@@ -1,124 +1,135 @@
-import React from "react";
 import {
-  Box,
   Container,
-  Text,
-  Center,
+  Stack,
   Flex,
-  Grid,
-  GridItem,
+  Box,
   Heading,
-  VStack,
+  Text,
   Button,
-  Tag,
-  TagLabel,
-  HStack,
-  Link,
-  Wrap,
-  WrapItem,
-  useBreakpointValue,
-  Img,
+  Image,
+  Icon,
+  IconButton,
+  createIcon,
+  IconProps,
   useColorModeValue,
 } from "@chakra-ui/react";
+import Link from "next/link";
 
-import Image from "next/image";
-import Github from "../icons/Github";
-
-export function Project() {
-  const iconBg = useColorModeValue("black", "white");
-
+export default function Project({
+  title,
+  desc,
+  imgUrl,
+  githubUrl,
+  demoUrl,
+  rtl,
+}) {
   return (
-    <>
-      <Box bgColor={"#715DF2"} borderRadius={15} my={10}>
-        <Grid
-          templateColumns={{
-            base: `repeat(1, 1fr)`,
-            sm: `repeat(1, 1fr)`,
-            lg: `repeat(9, 1fr)`,
-          }}
-          gap={{ base: 1, md: 4 }}
+    <Container maxW={"7xl"}>
+      <Stack
+        align={"center"}
+        spacing={{ base: 8, md: 10 }}
+        py={{ base: 20, md: 28 }}
+        direction={{ base: "column", md: rtl ? "row" : "row-reverse" }}
+      >
+        <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+          <Heading
+            lineHeight={1.1}
+            fontWeight={600}
+            fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
+          >
+            <Text as={"span"} position={"relative"}>
+              {title}
+            </Text>
+          </Heading>
+          <Text color={"gray.500"}>{desc}</Text>
+          <Stack
+            spacing={{ base: 4, sm: 6 }}
+            direction={{ base: "column", sm: "row" }}
+          >
+            <Link href={"/demo"}>
+              <Button
+                rounded={"full"}
+                size={"lg"}
+                fontWeight={"normal"}
+                px={6}
+                colorScheme={"red"}
+                bg={"red.400"}
+                _hover={{ bg: "red.500" }}
+              >
+                Demo
+              </Button>
+            </Link>
+            <Link href={githubUrl}>
+              <Button rounded={"full"} size={"lg"} fontWeight={"normal"} px={6}>
+                Github
+              </Button>
+            </Link>
+          </Stack>
+        </Stack>
+        <Flex
+          flex={1}
+          justify={"center"}
+          align={"center"}
+          position={"relative"}
+          w={"full"}
         >
-          <GridItem
-            colSpan={{ base: 1, lg: 4 }}
-            py={{ base: 5, md: 20 }}
-            px={10}
+          <Blob
+            w={"150%"}
+            h={"150%"}
+            position={"absolute"}
+            top={"-20%"}
+            left={0}
+            zIndex={-1}
+            color={useColorModeValue("red.50", "red.400")}
+          />
+          <Box
+            position={"relative"}
+            height={"300px"}
+            rounded={"2xl"}
+            boxShadow={"2xl"}
+            width={"full"}
+            overflow={"hidden"}
           >
-            <VStack align={"left"} spacing={{ base: "10px", md: "40px" }}>
-              <Heading
-                color={"white"}
-                mb={{ base: 0, md: 5 }}
-                size={{ base: "2xl", md: "3xl" }}
-              >
-                Tickets de BBVA
-              </Heading>
-              <Text color={"white"} fontSize={{ base: "2xl", md: "3xl" }}>
-                {" "}
-                Esta aplicacion fue creada para administrar turnos de BBVA. Los
-                clientes pueden tomar turnos, los empleados pueden ver los
-                turnos que tienen asignados y administrarlos.
-              </Text>
-              <Text fontSize={"20px"} color={"white"} decoration="underline">
-                <Link
-                  href="https://github.com/lucasangelino/BBVATicket"
-                  isExternal
-                >
-                  Demo
-                </Link>
-              </Text>
-              <HStack spacing={1}>
-                <Wrap>
-                  {["React", "Socket.io", "Css", "Html", "Chakra ui"].map(
-                    (size, index) => (
-                      <WrapItem key={index}>
-                        <Tag
-                          size={"lg"}
-                          key={index}
-                          borderRadius="full"
-                          variant="outline"
-                          colorScheme="blackAlpha"
-                        >
-                          <TagLabel>{size}</TagLabel>
-                        </Tag>
-                      </WrapItem>
-                    )
-                  )}
-                </Wrap>
-              </HStack>
-            </VStack>
-          </GridItem>
-          <GridItem
-            colSpan={{ base: 1, lg: 5 }}
-            bg="#715DF2"
-            py={{ base: 5, md: 30 }}
-            px={2}
-            borderRadius={15}
-          >
-            <Center w="100%">
-              <Box
-                w="100%"
-                h={{ base: "250px", md: "450px", lg: "700px" }}
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-                position={"relative"}
-              >
-                <Box
-                  w={{ base: "100%", md: "100%", lg: "850px" }}
-                  position={"absolute"}
-                  height={{ base: "230px", md: "460px", lg: "550px" }}
-                  left={{ base: "0", md: "0", lg: "50" }}
-                >
-                  <Image
-                    src="/images/ticket-with.notebook.png"
-                    layout="fill"
-                    alt="image"
-                  />
-                </Box>
-              </Box>
-            </Center>
-          </GridItem>
-        </Grid>
-      </Box>
-    </>
+            <IconButton
+              aria-label={"Play Button"}
+              variant={"ghost"}
+              _hover={{ bg: "transparent" }}
+              size={"lg"}
+              color={"white"}
+              position={"absolute"}
+              left={"50%"}
+              top={"50%"}
+              transform={"translateX(-50%) translateY(-50%)"}
+            />
+            <Image
+              alt={`${title} image`}
+              fit={"cover"}
+              align={"center"}
+              w={"100%"}
+              h={"100%"}
+              src={imgUrl}
+            />
+          </Box>
+        </Flex>
+      </Stack>
+    </Container>
   );
 }
+export const Blob = (props) => {
+  return (
+    <Icon
+      width={"100%"}
+      viewBox="0 0 578 440"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M239.184 439.443c-55.13-5.419-110.241-21.365-151.074-58.767C42.307 338.722-7.478 282.729.938 221.217c8.433-61.644 78.896-91.048 126.871-130.712 34.337-28.388 70.198-51.348 112.004-66.78C282.34 8.024 325.382-3.369 370.518.904c54.019 5.115 112.774 10.886 150.881 49.482 39.916 40.427 49.421 100.753 53.385 157.402 4.13 59.015 11.255 128.44-30.444 170.44-41.383 41.683-111.6 19.106-169.213 30.663-46.68 9.364-88.56 35.21-135.943 30.551z"
+        fill="currentColor"
+      />
+    </Icon>
+  );
+};

@@ -16,11 +16,6 @@ import ListOfProjects from "../components/portfolio/ListOfProjects";
 
 export default function Home() {
   return (
-    // TODO:
-    // Mejorar imagenes de proyectos
-    // Mejorar FreeLance
-    // Mejorar Mobile
-
     <>
       <Head>
         <title>Lucas Angelino 🐱‍🏍 - Portfolio</title>
@@ -33,7 +28,6 @@ export default function Home() {
       <Container maxW={"container.xl"} py={5}>
         <Flex py={{ base: 0, md: 5 }} direction={"column"}>
           <AboutMe />
-          <Portfolio />
           <ListOfProjects />
           <BlogBanner />
         </Flex>

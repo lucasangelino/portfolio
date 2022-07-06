@@ -10,22 +10,29 @@ import {
   Link,
 } from "@chakra-ui/react";
 import Image from "next/image";
+import Project from "../cards/Project";
 
 const projects = [
   {
-    name: "Live Map",
-    github: "https://github.com/lucasangelino",
-    img: "/images/maps.webp",
+    title: "BBVA Ticket",
+    desc: "Aplicacion que permite la gestion de tickets del banco BBVA. Crea nuevos escritorios de trabajo, abre y cierra tickets",
+    githubUrl: "https://github.com/lucasangelino/gifinder",
+    imgUrl: "/images/bbva-portfolio.jpg",
+    rtl: false,
   },
   {
-    name: "Chat io",
-    github: "https://github.com/lucasangelino/Ping-Chat",
-    img: "/images/chat.PNG",
+    title: "Chat",
+    desc: "Esta aplicacion de Chat te permite enviar mensajes a tus amigos, y recibir mensajes de ellos",
+    githubUrl: "https://github.com/lucasangelino/gifinder",
+    imgUrl: "/images/chat-login.jpg",
+    rtl: true,
   },
   {
-    name: "Gifinder",
-    github: "https://github.com/lucasangelino/gifinder",
-    img: "/images/gify.PNG",
+    title: "Gifs",
+    desc: "La aplicacion definitiva para buscar  y compartir gifs con tus amigos",
+    githubUrl: "https://github.com/lucasangelino/gifinder",
+    imgUrl: "/images/bbva-portfolio.jpg",
+    rtl: false,
   },
 ];
 
@@ -33,70 +40,11 @@ export default function ListOfProjects() {
   return (
     <>
       <Divider marginBottom={5} />
-      <Box>
-        <Heading
-          marginBottom={{ base: 0, sm: 2, md: 10 }}
-          position={"relative"}
-        >
-          Todos los proyectos
-          <Text
-            fontSize={"sm"}
-            position={"absolute"}
-            top="0"
-            right={0}
-            bgColor="tomato"
-            padding={1}
-            borderRadius="md"
-          >
-            Proximamente +
-          </Text>
-        </Heading>
-      </Box>
-      <Box>
-        <Grid
-          templateColumns={{
-            base: "repeat(1, 1fr)",
-            sm: "repeat(2, 1fr)",
-            md: "repeat(3, 1fr)",
-          }}
-          gap={2}
-        >
-          {projects.map((project, index) => (
-            <GridItem key={index}>
-              <Box
-                height={250}
-                width={350}
-                bgColor={"twitter.100"}
-                padding={10}
-                borderRadius={10}
-                position={"relative"}
-                marginRight={5}
-                marginBottom={{ base: 0, sm: 2, md: 5 }}
-              >
-                <Link href={project.github} isExternal>
-                  <Image
-                    src={project.img}
-                    layout="fill"
-                    alt={project.name}
-                    style={{ objectFit: "cover", borderRadius: 5 }}
-                  />
-                </Link>
-                <Box
-                  position={"absolute"}
-                  bottom={0}
-                  right={0}
-                  bgGradient="linear-gradient(0deg, #0d0e0e 0%, transparent 100%)"
-                  width={"100%"}
-                  textAlign={"right"}
-                  borderBottomRadius={10}
-                >
-                  <Text margin={5}>{project.name}</Text>
-                </Box>
-              </Box>
-            </GridItem>
-          ))}
-        </Grid>
-      </Box>
+
+      {projects.map((project, index) => (
+        <Project key={index} {...project} />
+      ))}
+      {/* <Project /> */}
       <Divider marginBottom={{ base: 2, sm: 20 }} />
     </>
   );
