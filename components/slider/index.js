@@ -11,7 +11,7 @@ export function Slider() {
         gridGap={"1rem"}
         overflowY={"auto"}
         overscrollBehaviorX={"contain"}
-        scrollSnapType={"x mandatory"}
+        // scrollSnapType={"x mandatory"}
         css={{
           "&::-webkit-scrollbar": {
             display: { base: "none", sm: "block" },
