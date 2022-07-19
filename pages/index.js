@@ -1,7 +1,7 @@
 import Head from "next/head";
 // libs
 import { Container, Flex } from "@chakra-ui/layout";
-import { Alert, AlertIcon } from "@chakra-ui/react";
+import { Alert, AlertIcon, Heading } from "@chakra-ui/react";
 
 // components
 import Navbar from "../components/navbar";
@@ -13,6 +13,7 @@ import Snippets from "../components/snippets";
 import MantainanceBanner from "../components/banners/MantainanceBanner";
 import BlogBanner from "../components/banners/BlogBanner";
 import ListOfProjects from "../components/portfolio/ListOfProjects";
+import { Slider } from "../components/slider";
 
 export default function Home() {
   return (
@@ -27,6 +28,10 @@ export default function Home() {
       <Container maxW={"container.xl"} py={5}>
         <Flex py={{ base: 0, md: 5 }} direction={"column"}>
           <AboutMe />
+          <Heading as={"h2"} size={"2xl"}>
+            Destacados
+          </Heading>
+          <Slider />
           <ListOfProjects />
           <BlogBanner />
         </Flex>
