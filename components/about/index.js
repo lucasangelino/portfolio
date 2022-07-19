@@ -47,8 +47,8 @@ export default function AboutMe() {
           <GridItem colSpan={colSpan}>
             {/* <AspectRatio maxW="500px" ratio={3 / 4}> */}
             <Image
-              src="/images/me.jpeg"
-              alt="naruto"
+              src="/images/me.JPEG"
+              alt="me"
               objectFit="cover"
               borderRadius={10}
             />
