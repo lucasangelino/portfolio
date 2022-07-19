@@ -16,8 +16,8 @@ export default function BlogBanner() {
     <Flex
       width={"100%"}
       bgColor="#0092E5"
-      paddingY={2}
-      paddingX={{ base: 5, md: 40 }}
+      paddingY={10}
+      paddingX={{ base: 7, md: 40 }}
       borderRadius={10}
       justify="space-between"
       marginY={5}

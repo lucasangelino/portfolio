@@ -6,7 +6,7 @@ export function Slider() {
     <>
       <Box
         paddingX={5}
-        paddingY={10}
+        paddingY={20}
         display={"flex"}
         gridGap={"1rem"}
         overflowY={"auto"}

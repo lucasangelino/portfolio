@@ -42,11 +42,20 @@ const projects = [
 export default function ListOfProjects() {
   return (
     <>
-      <Divider marginBottom={5} />
+      <Divider marginBottom={20} />
 
-      {projects.map((project, index) => (
-        <Project key={index} {...project} />
-      ))}
+      <Grid
+        gap={5}
+        templateColumns={{ base: "repeat(1, 1fr)", sm: "repeat(3, 1fr)" }}
+        marginY={5}
+      >
+        {projects.map((project, index) => (
+          <GridItem key={project.title}>
+            <Project key={index} {...project} />
+          </GridItem>
+        ))}
+      </Grid>
+
       {/* <Project /> */}
       <Divider marginBottom={{ base: 2, sm: 20 }} />
     </>
