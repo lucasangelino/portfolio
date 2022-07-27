@@ -8,6 +8,7 @@ import {
   Center,
   Link,
   Hide,
+  Text,
 } from "@chakra-ui/react";
 import Image from "next/image";
 
@@ -33,10 +34,11 @@ export default function BlogBanner() {
         <Heading>artículos de tecnologia.</Heading>
         <Box marginTop={5}>
           <Link href="https://lucasangelino.github.com" isExternal>
-            <Button variant="outline" colorScheme="gray">
+            <Button variant="outline" colorScheme="gray" disabled>
               Ir al blog
             </Button>
           </Link>
+          <Text fontSize={15}>Proximamente</Text>
         </Box>
       </Box>
       <Hide below="sm">

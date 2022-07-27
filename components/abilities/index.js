@@ -23,10 +23,14 @@ export default function Abilities() {
 
   return (
     <Container maxW={"4xl"} my={{ base: 10, md: 20 }}>
-      <Text fontSize="4xl" color={BRAND_500} mb={20} align={"center"}>
-        Skills
+      <Text fontSize="4xl" color={BRAND_500} mb={15} align={"center"}>
+        Tecnologias
       </Text>
-      <Center>
+      <Center
+        bgColor={"#051C2C"}
+        padding={{ base: 5, sm: 20 }}
+        borderRadius={20}
+      >
         <Wrap spacing="32px" justify="center">
           {/* Javascript */}
           <WrapItem>

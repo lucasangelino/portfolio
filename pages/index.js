@@ -32,6 +32,9 @@ export default function Home() {
             Destacados
           </Heading>
           <Slider />
+          <Heading as={"h2"} size={"2xl"} marginY={12}>
+            Otros proyectos
+          </Heading>
           <ListOfProjects />
           <BlogBanner />
         </Flex>

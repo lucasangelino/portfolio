@@ -18,7 +18,7 @@ const projects = [
     desc: "Aplicacion que permite la gestion de tickets del banco BBVA. Crea nuevos escritorios de trabajo, abre y cierra tickets",
     githubUrl: "https://github.com/lucasangelino/gifinder",
     imgUrl: "/images/bbva-portfolio.jpg",
-    tags: ["React", "NodeJS", "Express", "MongoDB", "ChakraUI"],
+    tags: ["React", "NodeJS", "Express", "MongoDB", "Ant Design"],
     rtl: false,
   },
   {
@@ -34,7 +34,15 @@ const projects = [
     desc: "La aplicacion definitiva para buscar  y compartir gifs con tus amigos",
     githubUrl: "https://github.com/lucasangelino/gifinder",
     imgUrl: "/images/gif2.png",
-    tags: ["React", "NodeJS", "Express", "MongoDB", "ChakraUI"],
+    tags: ["React", "ChakraUI"],
+    rtl: false,
+  },
+  {
+    title: "Google Stadia",
+    desc: "Landing page de Google Stadia. Compra tu pase de batalla y no te quedes afuera",
+    githubUrl: "https://github.com/lucasangelino/gaming",
+    imgUrl: "/images/stadia.png",
+    tags: ["React", "Vite", "Css"],
     rtl: false,
   },
 ];
@@ -42,8 +50,6 @@ const projects = [
 export default function ListOfProjects() {
   return (
     <>
-      <Divider marginBottom={20} />
-
       <Grid
         gap={5}
         templateColumns={{ base: "repeat(1, 1fr)", sm: "repeat(3, 1fr)" }}
