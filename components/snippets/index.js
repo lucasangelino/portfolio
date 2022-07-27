@@ -29,7 +29,7 @@ export default function Snippets() {
         >
           <Box width={{ md: "700px" }}>
             <Image
-              src="/images/carbon3.png"
+              src="/images/carbon3.webp"
               alt="Project Validation Script"
               objectFit="cover"
               borderRadius="xl"
@@ -80,7 +80,7 @@ export default function Snippets() {
           </Box>
           <Box width={{ md: "700px" }}>
             <Image
-              src="/images/carbon3.png"
+              src="/images/carbon3.webp"
               alt="Project Validation Script"
               objectFit="cover"
               borderRadius="xl"

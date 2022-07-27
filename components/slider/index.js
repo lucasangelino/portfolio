@@ -39,7 +39,7 @@ export function Slider() {
             borderTopRightRadius={{ base: "10px", md: "0px" }}
             borderBottomLeftRadius={{ base: "0px", md: "10px" }}
             borderBottomRightRadius={{ base: "0px", md: "0px" }}
-            src={`/images/project1_image.jpg`}
+            src={`/images/project1_image.webp`}
             objectFit={"cover"}
           />
           <Center
@@ -76,7 +76,7 @@ export function Slider() {
             borderTopRightRadius={{ base: "10px", md: "0px" }}
             borderBottomLeftRadius={{ base: "0px", md: "10px" }}
             borderBottomRightRadius={{ base: "0px", md: "0px" }}
-            src={`/images/project2_image.jpg`}
+            src={`/images/project2_image.webp`}
             objectFit={"cover"}
           />
           <Center
