@@ -36,7 +36,7 @@ function OfferCard({ children }) {
 
 export default function Freelance() {
   return (
-    <Box py={12}>
+    <Box py={12} id={"freelance"}>
       <VStack spacing={2} textAlign="center">
         <Text
           bgGradient="linear(to-l, #7928CA, #FF0080)"

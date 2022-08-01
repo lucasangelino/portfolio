@@ -5,6 +5,7 @@ export function Slider() {
   return (
     <>
       <Box
+        id={"portfolio"}
         paddingX={5}
         paddingY={20}
         display={"flex"}
