@@ -33,12 +33,11 @@ export default function BlogBanner() {
         <Heading>Visita mi blog y descucbre muchos</Heading>
         <Heading>artículos de tecnologia.</Heading>
         <Box marginTop={5}>
-          <Link href="https://lucasangelino.github.com" isExternal>
-            <Button variant="outline" colorScheme="gray" disabled>
+          <Link href="https://blog-five-bay.vercel.app/" isExternal>
+            <Button variant="outline" colorScheme="gray">
               Ir al blog
             </Button>
           </Link>
-          <Text fontSize={15}>Proximamente</Text>
         </Box>
       </Box>
       <Hide below="sm">
